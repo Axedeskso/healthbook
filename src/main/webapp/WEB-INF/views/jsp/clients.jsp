@@ -10,10 +10,10 @@
     <jsp:include page="./fragments/header.jsp" />
     <body>
         <jsp:include page="./fragments/navbar/user/nav_user.jsp" />
-        <div class="container-fluid" id="page-content-wrapper" style="padding-top: 4%;">
+        <div class="container-fluid" id="page-content-wrapper">
             <div class="page-content">
                 <div class="row">
-                    <div class="col-xs-3 fixed">
+                    <div class="col-xs-2">
                         <jsp:include page="./fragments/tools/user/profil_user.jsp" />
                         <sec:authorize access="hasRole('ROLE_ADMIN')">
                             <div class="row">
@@ -24,13 +24,15 @@
                             <jsp:include page="./fragments/tools/user/blocnote_user.jsp" />
                         </sec:authorize>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-xs-8">
                         <sec:authorize access="hasRole('ROLE_ADMIN')">
                             ${adm}
                         </sec:authorize>
-                        <jsp:include page="./fragments/actualite.jsp" />
+                        <sec:authorize access="hasRole('ROLE_USER')">
+                            <jsp:include page="./fragments/tools/user/main_content.jsp" />
+                        </sec:authorize>
                     </div>
-                    <div class="col-xs-3 fixed">
+                    <div class="col-xs-2">
                         <sec:authorize access="hasRole('ROLE_USER')">
                             <jsp:include page="./fragments/tools/user/tools_user.jsp" />
                         </sec:authorize>

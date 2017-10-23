@@ -12,21 +12,17 @@
     <div class="list-group">
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-xs-10">
-                    Je teste le bloc-note
-                </div>
-                <div class="col-xs-2">
-                    <button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button>
+                <div class="col-xs-12">
+                    Je teste le bloc-note2
+                    <button class="btn btn-success btn-xs pull-right"><span class="glyphicon glyphicon-eye-open"></span></button>
                 </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-xs-10">
+                <div class="col-xs-12">
                     Je teste le bloc-note pour la...
-                </div>
-                <div class="col-xs-2">
-                    <button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button>
+                    <button class="btn btn-success btn-xs pull-right"><span class="glyphicon glyphicon-eye-open"></span></button>
                 </div>
             </div>
         </a>

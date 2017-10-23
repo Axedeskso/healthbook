@@ -2,7 +2,7 @@
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid" >
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -25,6 +25,9 @@
 
                 </div>
             </form>
+            
+                        <a class="navbar-brand" href="${contextPath}/clients">Clientèle</a>
+
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/healthbook/profil"><img src="<c:url value="/resources/core/img/pau.jpg" />" class="img-responsive min-img"> Pau <b>Garcia Gozalvez</b></a></li>
                 <li class="dropdown">
