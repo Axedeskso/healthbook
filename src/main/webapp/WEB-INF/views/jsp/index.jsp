@@ -29,6 +29,7 @@
                             ${adm}
                         </sec:authorize>
                         <jsp:include page="./fragments/actualite.jsp" />
+                        
                     </div>
                     <div class="col-xs-3 fixed">
                         <sec:authorize access="hasRole('ROLE_USER')">

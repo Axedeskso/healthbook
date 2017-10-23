@@ -10,7 +10,7 @@
     <jsp:include page="../../fragments/header.jsp" />
     <body>
         <jsp:include page="../../fragments/navbar/user/nav_user.jsp" />
-        <div class="container-fluid" id="page-content-wrapper">
+        <div class="container-fluid" id="page-content-wrapper" style="padding-top: 4%;">
             <div class="page-content">
                 <div class="row">
                     <div class="col-xs-2">
