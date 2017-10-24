@@ -1,6 +1,7 @@
 package com.fromentin.security;
 
 import java.util.List;
+import javax.persistence.Entity;
 import org.springframework.security.core.userdetails.UserDetails;
 
 public class HealthbookUser implements UserDetails {

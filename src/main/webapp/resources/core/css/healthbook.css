@@ -64,6 +64,9 @@ b{
 }
 
 /*NAVBAR*/
+.navbar{
+        box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
 .navbar-inverse {
     background-color: MediumSeaGreen;
     border-color: MediumSeaGreen;
@@ -190,4 +193,10 @@ b{
 /* On mouse-over, add a deeper shadow */
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.carte{
+    padding: 0;
+/*    border: 1px solid rgba(60, 179, 113, 0.5);*/
+    background-color: #e0ffdc;
 }

@@ -16,7 +16,7 @@
                     <div class="col-xs-3">
                         <jsp:include page="./fragments/tools/user/profil_user.jsp" />
                         <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="./fragments/tools/user/blocnote_user.jsp" />
+                            <jsp:include page="./fragments/tools/metier/blocnote_user.jsp" />
                         </sec:authorize>
                     </div>
                     <div class="col-xs-6">

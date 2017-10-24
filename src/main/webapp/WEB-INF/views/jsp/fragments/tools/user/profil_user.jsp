@@ -3,10 +3,10 @@
 <div class="panel panel-success">
     <div class="panel-heading">
         <div class="row">
-            <div class="col-sm-6">
-                <img src="<c:url value="/resources/core/img/pau.jpg" />" class="img-responsive">
+            <div class="col-sm-3">
+                <img src="<c:url value="/resources/core/img/pau.jpg" />" class="img-circle img-responsive">
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-9">
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-12">Bonjour <label> ${pageContext.request.userPrincipal.name}</label></div>

@@ -4,36 +4,55 @@
     <div class="panel panel-success">
         <div class="panel-heading">
             <div class="row">
-                <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user2.jpg" />" class="img-responsive">
+                <div class="col-sm-1">
+                    <img src="<c:url value="/resources/core/img/users/user2.jpg" />" class="img-circle img-responsive">
                 </div>
-                <div class="col-xs-11">
+                <div class="col-sm-11">
                     <div class="row"><label>Jorge Mario BERGOGLIO</label> a partagé un article</div>
-                    <div class="row">15 novembre 2017</div>
+                    <div class="row">15 novembre 2017 <i class="fa fa-external-link" aria-hidden="true"></i></div>
                 </div>
             </div>
         </div>
         <div class="panel-body">
-
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-sm-12">
                     <p>Puisse le Seigneur, dans Sa grâce, garantir nos coeurs de toutes faussetés et de ces esprits séduisants qui voudraient nous éloigner loin de Lui et loin de l'ésperance que procure Son Evangile de manière à ce que nous puissions demeurer dans une paix parfaire malgrè le tumulte et les bruits assourdissants de ce monde ayant toujours à l'esprit que quoi qu'il en soit, Il a promis qu'Il serait avec nous tous les jours jusqu'à la fin du monde.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-sm-12">
                     <a href="" data-toggle="modal" data-target="#act1">
-                        <div class="card">
+                        <div class="container-fluid carte">
                             <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu2.jpg" />" >
-                            <div class="card-block">
+<!--                            <div class="card-block">-->
                                 <div class="row">
-                                    <div class="col-xs-12">
+                                    <div class="col-sm-12">
                                         <h4 class="card-title"><label>Dernier message avant la fin du monde</label></h4>
                                     </div>
                                 </div>
-                            </div>
+                            <!--</div>-->
                         </div>
                     </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-xs btn-success"><i class="fa fa-heart" aria-hidden="true"></i> 7G</button>
+                    <button class="btn btn-xs btn-success"><i class="fa fa-comments" aria-hidden="true"></i> 6.5G</button>
+                    <button class="btn btn-xs btn-success"><i class="fa fa-share" aria-hidden="true"></i> 240k</button>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-heart" aria-hidden="true"></i> Aimer</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-comments" aria-hidden="true"></i> Commenter</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-share" aria-hidden="true"></i> Partager</button>
                 </div>
             </div>
         </div>
@@ -95,11 +114,11 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user1.jpg" />" class="img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user1.jpg" />" class="img-circle img-responsive">
                 </div>
                 <div class="col-xs-11">
-                    <div class="row"><label>Hervé PINGAUD</label></div>
-                    <div class="row">01 novembre 2017</div>
+                    <div class="row"><label>Hervé PINGAUD</label> a partagé un article</div>
+                    <div class="row">01 novembre 2017 <i class="fa fa-external-link" aria-hidden="true"></i></div>
                 </div>
             </div>
         </div>
@@ -112,17 +131,30 @@
             <div class="row">
                 <div class="col-xs-12">
                     <a href="" data-toggle="modal" data-target="#act2">
-                    <div class="card">
-                        <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu5.jpg" />" >
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <h4 class="card-title"><label>Le Pentagone lance le projet Manhattan II contre les zones de quarantaine</label></h4>
+                        <div class="container-fluid carte">
+                            <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu5.jpg" />" >
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 class="card-title"><label>Le Pentagone lance le projet Manhattan II contre les zones de quarantaine</label></h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </a>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-heart" aria-hidden="true"></i> Aimer</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-comments" aria-hidden="true"></i> Commenter</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-share" aria-hidden="true"></i> Partager</button>
                 </div>
             </div>
         </div>
@@ -163,11 +195,11 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user3.jpg" />" class="img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user3.jpg" />" class="img-circle img-responsive">
                 </div>
                 <div class="col-xs-11">
-                    <div class="row"><label>Didier DESCHAMPS</label></div>
-                    <div class="row">25 octobre 2017</div>
+                    <div class="row"><label>Didier DESCHAMPS</label> a partagé un article</div>
+                    <div class="row">25 octobre 2017 <i class="fa fa-external-link" aria-hidden="true"></i></div>
                 </div>
             </div>
         </div>
@@ -179,18 +211,31 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <a href="" data-toggle="modal" data-target="#">
-                    <div class="card">
-                        <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu1.jpg" />" >
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <h4 class="card-title"><label>Les safety zone sur le point d'imploser</label></h4>
+                    <a href="#" data-toggle="modal" data-target="#">
+                        <div class="container-fluid carte">
+                            <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu1.jpg" />" >
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 class="card-title"><label>Les safety zone sur le point d'imploser</label></h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </a>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-heart" aria-hidden="true"></i> Aimer</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-comments" aria-hidden="true"></i> Commenter</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-share" aria-hidden="true"></i> Partager</button>
                 </div>
             </div>
         </div>
@@ -205,8 +250,8 @@
                     <img src="<c:url value="/resources/core/img/users/user4.jpg" />" class="img-responsive">
                 </div>
                 <div class="col-xs-11">
-                    <div class="row"><label>Matt DAMON</label></div>
-                    <div class="row">26 septembre 2017</div>
+                    <div class="row"><label>Matt DAMON</label> a partagé un article</div>
+                    <div class="row">26 septembre 2017 <i class="fa fa-external-link" aria-hidden="true"></i></div>
                 </div>
             </div>
         </div>
@@ -218,19 +263,32 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <a href="" data-toggle="modal" data-target="#">
-                    <div class="card">
-                        <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu7.jpg" />" >
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <h4 class="card-title"><label>4 à 5 personnes atteintes du H6N66 mises sous hibernation pour la recherche</label></h4>
+                    <a href="#" data-toggle="modal" data-target="#">
+                        <div class="container-fluid carte">
+                            <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu7.jpg" />" >
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 class="card-title"><label>4 à 5 personnes atteintes du H6N66 mises sous hibernation pour la recherche</label></h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>   
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-heart" aria-hidden="true"></i> Aimer</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-comments" aria-hidden="true"></i> Commenter</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-share" aria-hidden="true"></i> Partager</button>
+                </div>
             </div>
         </div>
     </div>
@@ -244,8 +302,8 @@
                     <img src="<c:url value="/resources/core/img/users/user5.jpg" />" class="img-responsive">
                 </div>
                 <div class="col-xs-11">
-                    <div class="row"><label>Serge LAMA</label></div>
-                    <div class="row">26 septembre 2017</div>
+                    <div class="row"><label>Serge LAMA</label> a partagé un article</div>
+                    <div class="row">26 septembre 2017 <i class="fa fa-external-link" aria-hidden="true"></i></div>
                 </div>
             </div>
         </div>
@@ -257,19 +315,32 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <a href="" data-toggle="modal" data-target="#">
-                    <div class="card">
-                        <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu3.jpg" />" >
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <h4 class="card-title"><label>Le H6N66 défini comme le virus le plus diabolique</label></h4>
+                    <a href="#" data-toggle="modal" data-target="#">
+                        <div class="container-fluid carte">
+                            <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu3.jpg" />" >
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 class="card-title"><label>Le H6N66 défini comme le virus le plus diabolique</label></h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>   
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-heart" aria-hidden="true"></i> Aimer</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-comments" aria-hidden="true"></i> Commenter</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-share" aria-hidden="true"></i> Partager</button>
+                </div>
             </div>
         </div>
     </div>
@@ -283,8 +354,8 @@
                     <img src="<c:url value="/resources/core/img/users/user6.jpg" />" class="img-responsive">
                 </div>
                 <div class="col-xs-11">
-                    <div class="row"><label>Patrick PELLOUX</label></div>
-                    <div class="row">04 septembre 2017</div>
+                    <div class="row"><label>Patrick PELLOUX</label> a partagé un article</div>
+                    <div class="row">04 septembre 2017 <i class="fa fa-external-link" aria-hidden="true"></i></div>
                 </div>
             </div>
         </div>
@@ -296,19 +367,32 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <a href="" data-toggle="modal" data-target="#">
-                    <div class="card">
-                        <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu4.jpg" />" >
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <h4 class="card-title"><label>SGSV gate : les virus echappés ont muté en super-virus </label></h4>
+                    <a href="#" data-toggle="modal" data-target="#">
+                        <div class="container-fluid carte">
+                            <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu4.jpg" />" >
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 class="card-title"><label>SGSV gate : les virus echappés ont muté en super-virus </label></h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     </a>
                 </div>   
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-heart" aria-hidden="true"></i> Aimer</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-comments" aria-hidden="true"></i> Commenter</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-share" aria-hidden="true"></i> Partager</button>
+                </div>
             </div>
         </div>
     </div>
@@ -322,8 +406,8 @@
                     <img src="<c:url value="/resources/core/img/users/user7.jpg" />" class="img-responsive">
                 </div>
                 <div class="col-xs-11">
-                    <div class="row"><label>Edward SNOWDEN</label></div>
-                    <div class="row">31 août 2017</div>
+                    <div class="row"><label>Edward SNOWDEN</label> a partagé un article <i class="fa fa-external-link" aria-hidden="true"></i></div>
+                    <div class="row"> 31 août 2017 <i class="fa fa-universal-access" aria-hidden="true"></i></div>
                 </div>
             </div>
         </div>
@@ -335,16 +419,31 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="card">
-                        <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu6.jpg" />" >
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <h4 class="card-title"><label>Suite à un problème technique, de nombreux virus s'échappent du Svalbard Gloal Seed Vault </label></h4>
+                    <a href="#" data-toggle="modal" data-target="#">
+                        <div class="container-fluid carte">
+                            <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu6.jpg" />" >
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h4 class="card-title"><label>Suite à un problème technique, de nombreux virus s'échappent du Svalbard Gloal Seed Vault </label></h4>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-heart" aria-hidden="true"></i> Aimer</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-comments" aria-hidden="true"></i> Commenter</button>
+                </div>
+                <div class="col-xs-4">
+                    <button class="btn btn-block btn-success"><i class="fa fa-share" aria-hidden="true"></i> Partager</button>
                 </div>
             </div>
         </div>

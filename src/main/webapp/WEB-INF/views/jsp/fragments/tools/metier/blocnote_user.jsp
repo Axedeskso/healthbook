@@ -4,7 +4,7 @@
     <div class="panel-heading">
         <div class="row">
             <div class="col-sm-12">
-                Bloc-note
+                <i class="fa fa-sticky-note" aria-hidden="true"></i> Bloc-note
             </div>
         </div>       
     </div>
@@ -12,23 +12,21 @@
     <div class="list-group">
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-xs-12">
-                    Je teste le bloc-note2
-                    <button class="btn btn-success btn-xs pull-right"><span class="glyphicon glyphicon-eye-open"></span></button>
+                <div class="col-sm-12">
+                    Note n°2
                 </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
                 <div class="col-xs-12">
-                    Je teste le bloc-note pour la...
-                    <button class="btn btn-success btn-xs pull-right"><span class="glyphicon glyphicon-eye-open"></span></button>
+                    Note n°1
                 </div>
             </div>
         </a>
     </div>
     <div class="panel-body">
-        <button class="btn btn-success btn-block" data-toggle="modal" data-target="#bc">Ajouter une note</button>
+        <button class="btn btn-block btn-success " data-toggle="modal" data-target="#bc">Ajouter une note</button>
     </div>
 </div>
 

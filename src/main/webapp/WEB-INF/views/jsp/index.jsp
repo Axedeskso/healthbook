@@ -17,23 +17,22 @@
                         <jsp:include page="./fragments/tools/user/profil_user.jsp" />
                         <sec:authorize access="hasRole('ROLE_ADMIN')">
                             <div class="row">
-                                <a href="/healthbook/administration"><button class="btn btn-success btn-block">ADMINISTRATION</button></a>
+                                <a href="/healthbook/administration"><button class="btn btn-success btn-block"><i class="fa fa-tachometer" aria-hidden="true"></i> Tableau de bord</button></a>
                             </div>
                         </sec:authorize>
-                        <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="./fragments/tools/user/blocnote_user.jsp" />
+                        <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
+                            <jsp:include page="./fragments/tools/metier/blocnote_user.jsp" />
                         </sec:authorize>
                     </div>
                     <div class="col-xs-6">
-                        <sec:authorize access="hasRole('ROLE_ADMIN')">
-                            ${adm}
-                        </sec:authorize>
                         <jsp:include page="./fragments/actualite.jsp" />
-                        
                     </div>
                     <div class="col-xs-3 fixed">
                         <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="./fragments/tools/user/tools_user.jsp" />
+                            <jsp:include page="./fragments/tools/administrateur/decompte_user.jsp" />
+                        </sec:authorize>
+                        <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
+                            <jsp:include page="./fragments/tools/metier/tools_user.jsp" />
                         </sec:authorize>
                         <sec:authorize access="hasRole('ROLE_ADMIN')">
                             <jsp:include page="./fragments/tools/administrateur/session_admin.jsp" />

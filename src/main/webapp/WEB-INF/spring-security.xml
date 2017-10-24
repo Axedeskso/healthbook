@@ -36,6 +36,8 @@
                 <security:user-service>
                     <security:user name="admin" password="admin" authorities="ROLE_ADMIN" />
                     <security:user name="test" password="test" authorities="ROLE_USER" />
+                    <security:user name="pharma" password="pharma" authorities="ROLE_PHARMACIEN" />
+                    <security:user name="medecin" password="mg" authorities="ROLE_MEDECIN" />
                 </security:user-service>
             </security:authentication-provider>
         </security:authentication-manager>

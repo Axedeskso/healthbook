@@ -3,7 +3,7 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
 <div class="panel panel-success">
-    <div class="panel-heading">Outils</div>
+    <div class="panel-heading"><i class="fa fa-archive" aria-hidden="true"></i> Outils</div>
     <div class="list-group">
         <a href="${contextPath}/tools/nomenclatures"class="list-group-item">
             <div class="row">
@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-xs-2">
                         <button class="btn btn-success btn-xs pull-right">
-                            <span class="glyphicon glyphicon-arrow-right"></span>
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         </button>
                 </div>
             </div>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-xs-2">
                         <button class="btn btn-success btn-xs pull-right">
-                            <span class="glyphicon glyphicon-arrow-right"></span>
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         </button>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-xs-2">
                         <button class="btn btn-success btn-xs pull-right">
-                            <span class="glyphicon glyphicon-arrow-right"></span>
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         </button>
                 </div>
             </div>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-xs-2">
                         <button class="btn btn-success btn-xs pull-right">
-                            <span class="glyphicon glyphicon-arrow-right"></span>
+                           <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         </button>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-xs-2">
                         <button class="btn btn-success btn-xs pull-right">
-                            <span class="glyphicon glyphicon-arrow-right"></span>
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         </button>
                 </div>
             </div>
@@ -72,10 +72,11 @@
                 </div>
                 <div class="col-xs-2">
                         <button class="btn btn-success btn-xs pull-right">
-                            <span class="glyphicon glyphicon-arrow-right"></span>
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
                         </button>
                 </div>
             </div>
         </a>
+            
     </div>
 </div>

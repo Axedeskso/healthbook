@@ -1,11 +1,11 @@
 <div class="panel panel-success">
     <div class="panel-heading">
         <ul class="nav nav-pills">
-            <li class="active"><a data-toggle="tab" href="#j1">GRANDGUILLOTTE Léonore</a></li>
-            <li><a data-toggle="tab" href="#j2">FLEUROT Alexandre</a></li>
-            <li><a data-toggle="tab" href="#j3">RAWAT Eshane</a></li>
-            <li><a data-toggle="tab" href="#j4">HASSANI Hamada</a></li>
-            <li><a data-toggle="tab" href="#j5">RODRIGUEZ Nicolas</a></li>
+            <li class="active"><a data-toggle="tab" href="#j1">GRANDGUILLOTTE L.</a></li>
+            <li><a data-toggle="tab" href="#j2">FLEUROT A.</a></li>
+            <li><a data-toggle="tab" href="#j3">RAWAT E.</a></li>
+            <li><a data-toggle="tab" href="#j4">HASSANI H.</a></li>
+            <li><a data-toggle="tab" href="#j5">RODRIGUEZ N.</a></li>
         </ul>
     </div>
     <div class="panel-body">

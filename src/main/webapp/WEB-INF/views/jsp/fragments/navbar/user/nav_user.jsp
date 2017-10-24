@@ -1,4 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         isELIgnored="false" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+<%@page session="true"%>
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
@@ -26,10 +31,13 @@
                 </div>
             </form>
             
-                        <a class="navbar-brand" href="${contextPath}/clients">Clientèle</a>
+                        
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/healthbook/profil"><img src="<c:url value="/resources/core/img/pau.jpg" />" class="img-responsive min-img"> Pau <b>Garcia Gozalvez</b></a></li>
+                <li><a href="${contextPath}/profil"><img src="<c:url value="/resources/core/img/pau.jpg" />" class="img-responsive min-img"> Pau <b>Garcia Gozalvez</b></a></li>
+                <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
+                <li><a href="${contextPath}/clients"><i class="fa fa-users" aria-hidden="true"></i>  ClientÃ¨le</a></li>
+                </sec:authorize>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <span class="glyphicon glyphicon-envelope"></span><span class="badge messages">4</span>
@@ -56,7 +64,7 @@
                                             <div class="col-sm-1"></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-12 small">Message n°1</div>
+                                            <div class="col-sm-12 small">Message nÂ°1</div>
                                         </div></div>
                                 </div>
                             </a>
@@ -73,7 +81,7 @@
                                             <div class="col-sm-1"></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-12 small">Message n°2</div>
+                                            <div class="col-sm-12 small">Message nÂ°2</div>
                                         </div></div>
                                 </div>
                             </a>
@@ -90,7 +98,7 @@
                                             <div class="col-sm-1"></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-12 small">Message n°3</div>
+                                            <div class="col-sm-12 small">Message nÂ°3</div>
                                         </div></div>
                                 </div>
                             </a>
@@ -107,7 +115,7 @@
                                             <div class="col-sm-1"></div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-sm-12 small">Message n°4</div>
+                                            <div class="col-sm-12 small">Message nÂ°4</div>
                                         </div></div>
                                 </div>
                             </a>
@@ -132,11 +140,11 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"><div class="row">Paramètres <span class="glyphicon glyphicon-cog pull-right"></span></div>
+                            <a href="#"><div class="row">ParamÃ¨tres <span class="glyphicon glyphicon-cog pull-right"></span></div>
                             </a>
                         </li>
                         <li>
-                            <a href="/healthbook/login?logout"><div class="row">Déconnexion <span class="glyphicon glyphicon-remove-sign pull-right"></span></div>
+                            <a href="${contextPath}/login?logout"><div class="row">DÃ©connexion <span class="glyphicon glyphicon-remove-sign pull-right"></span></div>
                             </a>
                         </li>
                     </ul>
