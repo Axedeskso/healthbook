@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-sm-11">
                     <div class="row"><label>Jorge Mario BERGOGLIO</label> a partagé un article</div>
-                    <div class="row">15 novembre 2017 <i class="fa fa-external-link" aria-hidden="true"></i></div>
+                    <div class="row"><small>15 novembre 2017 <i class="fa fa-external-link" aria-hidden="true"></i></small></div>
                 </div>
             </div>
         </div>
