@@ -36,7 +36,7 @@
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="${contextPath}/profil"><img src="<c:url value="/resources/core/img/pau.jpg" />" class="img-responsive min-img"> Pau <b>Garcia Gozalvez</b></a></li>
                 <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
-                <li><a href="${contextPath}/clients"><i class="fa fa-users" aria-hidden="true"></i>  Clientèle</a></li>
+                <li><a href="${contextPath}/clients"><i class="fa fa-users" aria-hidden="true"></i>  Patientèle</a></li>
                 </sec:authorize>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

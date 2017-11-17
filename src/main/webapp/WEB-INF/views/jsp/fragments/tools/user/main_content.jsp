@@ -1,16 +1,29 @@
 <div class="panel panel-success">
     <div class="panel-heading">
-        <ul class="nav nav-pills">
-            <li class="active"><a data-toggle="tab" href="#j1">GRANDGUILLOTTE L.</a></li>
-            <li><a data-toggle="tab" href="#j2">FLEUROT A.</a></li>
-            <li><a data-toggle="tab" href="#j3">RAWAT E.</a></li>
-            <li><a data-toggle="tab" href="#j4">HASSANI H.</a></li>
-            <li><a data-toggle="tab" href="#j5">RODRIGUEZ N.</a></li>
-        </ul>
+        <i class="fa fa-users" aria-hidden="true"></i>  Patientèle
     </div>
     <div class="panel-body">
+        <div class="row">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#j1">GRANDGUILLOTTE L.</a>
+            </li>
+            <li class="nav-item">
+                <a data-toggle="tab" href="#j2">FLEUROT A.</a>
+            </li>
+            <li class="nav-item">
+                <a data-toggle="tab" href="#j3">RAWAT E.</a>
+            </li>
+            <li class="nav-item">
+                <a data-toggle="tab" href="#j4">HASSANI H.</a>
+            </li>
+            <li class="nav-item">
+                <a data-toggle="tab" href="#j5">RODRIGUEZ N.</a>
+            </li>
+        </ul>
+        </div>
         <div class="tab-content">
-            <div id="j1" class="tab-pane fade in active">
+            <div id="j1" class="tab-pane fade">
                 <div class="form-group">
                     <h4>Informations personnelles</h4>
                     <div class="row">

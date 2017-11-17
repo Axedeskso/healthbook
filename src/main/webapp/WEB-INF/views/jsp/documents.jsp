@@ -1,3 +1,5 @@
+<%@page import="com.fromentin.security.HealthbookUser"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          isELIgnored="false" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -15,20 +17,19 @@
                 <div class="row">
                     <div class="col-xs-2">
                         <jsp:include page="./fragments/tools/user/profil_user.jsp" />
-                        <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
-                            <jsp:include page="./fragments/tools/metier/blocnote_user.jsp" />
+                        <sec:authorize access="hasRole('ROLE_USER')">
+                            <jsp:include page="./fragments/tools/user/documents.jsp" />
                         </sec:authorize>
                     </div>
                     <div class="col-xs-8">
-                        <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
-                            <jsp:include page="./fragments/tools/user/main_content.jsp" />
+                        <sec:authorize access="hasRole('ROLE_USER')">
+                            <jsp:include page="./fragments/liste_documents.jsp" />
                         </sec:authorize>
                     </div>
                     <div class="col-xs-2">
-                        <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
-                            <jsp:include page="./fragments/tools/metier/tools_user.jsp" />
+                        <sec:authorize access="hasRole('ROLE_USER')">
+                            <jsp:include page="./fragments/tools/administrateur/decompte_user.jsp" />
                         </sec:authorize>
-
                     </div>
                 </div>
             </div>    

@@ -4,7 +4,7 @@
     <div class="panel-heading">
         <div class="row">
             <div class="col-sm-12">
-                Démolition prévue dans
+                Joueurs
             </div>
         </div>       
     </div>
@@ -16,7 +16,6 @@
                     <div class="row">
                         <div id="countdown">
                             <div class="col-xs-12"></div>
-                            <span id="countdown_hour">00</span>:<span id="countdown_min" >00</span>:<span id="countdown_sec" >00</span>
                         </div>
                     </div>
                 </div>

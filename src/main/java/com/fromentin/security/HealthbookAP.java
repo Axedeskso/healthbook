@@ -28,8 +28,7 @@ public class HealthbookAP implements AuthenticationProvider {
         try {
             HealthbookUser user = userService.loadUserByUsername(username);
             HealthbookRole r = new HealthbookRole();
-
-            List<HealthbookRole> roles = new ArrayList<HealthbookRole>();
+            List<HealthbookRole> roles = user.getAuthorities();
             roles.add(r);
             user.setAuthorities(roles);
             Collection<? extends GrantedAuthority> authorities = user.getAuthorities();

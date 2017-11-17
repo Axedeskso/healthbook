@@ -3,6 +3,8 @@ $(document).ready(function () {
         if ($('body').hasClass('night')) {
             $('body').removeClass('night');
             $('.panel-body').removeClass('night');
+            $('.panel-footer').removeClass('night');
+            $('.card-title').removeClass('night');
             $('.img-thumbnail').removeClass('night');
             $('.card').removeClass('night-card');
             $('.list-group-item').removeClass('night');
@@ -11,6 +13,8 @@ $(document).ready(function () {
         } else {
             $('body').addClass('night');
             $('.panel-body').addClass('night');
+            $('.panel-footer').addClass('night');
+            $('.card-title').addClass('night');
             $('.img-thumbnail').addClass('night');
             $('.card').addClass('night-card');
             $('.list-group-item').addClass('night');

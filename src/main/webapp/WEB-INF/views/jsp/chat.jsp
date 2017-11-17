@@ -13,17 +13,15 @@
         <div class="container-fluid" id="page-content-wrapper" style="padding-top: 4%;">
             <div class="page-content">
                 <div class="row">
-                    <div class="col-xs-3">
+                    <div class="col-xs-2">
                         <jsp:include page="./fragments/tools/user/profil_user.jsp" />
                         <sec:authorize access="hasRole('ROLE_USER')">
                             <jsp:include page="./fragments/tools/metier/blocnote_user.jsp" />
                         </sec:authorize>
                     </div>
-                    <div class="col-xs-6">
+                    <div class="col-xs-8">
                         <div class="panel panel-success">
                             <div class="panel-heading">Messages</div>
-
-                            
                             <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-success">
                                     <div class="row">
@@ -105,7 +103,7 @@
 
                         </div>
                     </div>
-                    <div class="col-xs-3">
+                    <div class="col-xs-2">
                         <sec:authorize access="hasRole('ROLE_USER')">
                             <jsp:include page="./fragments/tools/user/tools_user.jsp" />
                         </sec:authorize>

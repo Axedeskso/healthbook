@@ -83,6 +83,9 @@ b{
     border-left: 1px solid #f2f2f2;
     border-right: 1px solid #ffffff;
 }
+.nav-tabs>li>a {
+    padding: 5px 5px;
+}
 .btn-search{
     color: #3cb371;
     background-color: #fff;

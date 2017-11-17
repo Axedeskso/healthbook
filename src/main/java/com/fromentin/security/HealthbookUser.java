@@ -1,9 +1,12 @@
 package com.fromentin.security;
 
+import java.lang.annotation.Documented;
 import java.util.List;
 import javax.persistence.Entity;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "users")
 public class HealthbookUser implements UserDetails {
 
     private String username;
