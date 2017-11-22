@@ -3,58 +3,90 @@
 <div class="panel panel-success">
     <div class="panel-heading">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-10">
                 <i class="fa fa-sticky-note" aria-hidden="true"></i> Bloc-note
             </div>
+            <div class="col-xs-2">
+                        <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#bc">
+                            <i class="fa fa-plus-square" aria-hidden="true"></i>
+                        </button>
+                </div>
         </div>       
     </div>
 
     <div class="list-group">
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-10">
                     D 0218944561
                 </div>
+                <div class="col-xs-2">
+                        <button class="btn btn-success btn-xs pull-right">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-10">
                     E 3456789445
                 </div>
+                <div class="col-xs-2">
+                        <button class="btn btn-success btn-xs pull-right">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-10">
                     M 8411126778
                 </div>
+                <div class="col-xs-2">
+                        <button class="btn btn-success btn-xs pull-right">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-10">
                     O 5486107895
                 </div>
+                <div class="col-xs-2">
+                        <button class="btn btn-success btn-xs pull-right">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-10">
                     N 5473594610
                 </div>
+                <div class="col-xs-2">
+                        <button class="btn btn-success btn-xs pull-right">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-10">
                     S 1547893865
+                </div>
+                <div class="col-xs-2">
+                        <button class="btn btn-success btn-xs pull-right">
+                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </button>
                 </div>
             </div>
         </a>
-    </div>
-    <div class="panel-body">
-        <button class="btn btn-block btn-success " data-toggle="modal" data-target="#bc">Ajouter une note</button>
     </div>
 </div>
 

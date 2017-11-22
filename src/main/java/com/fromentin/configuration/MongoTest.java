@@ -28,7 +28,7 @@ public class MongoTest {
             DB db = mongo.getDB(bdd);
             System.out.println("Connexion avec la base "+bdd+" établie");
 // GET COLLECTION
-            DBCollection collectionUser = db.getCollection("user");
+            DBCollection collectionUser = db.getCollection("users");
             
             System.out.println("Nettoyage de la collection USER en cours...");
             DBCursor cr = collectionUser.find();

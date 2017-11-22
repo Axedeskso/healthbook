@@ -28,7 +28,7 @@ $(document).ready(function () {
 
     countdownManager = {
         // Configuration
-        targetTime: new Date('2017-10-24 18:00:00'), // Date cible du compte à rebours (00:00:00)
+        targetTime: new Date('2017-12-31 23:59:59'), // Date cible du compte à rebours (00:00:00)
         displayElement: {// Elements HTML où sont affichés les informations
             day: null,
             hour: null,

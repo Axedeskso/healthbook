@@ -15,13 +15,19 @@
                 <div class="row">
                     <div class="col-xs-2">
                         <jsp:include page="./fragments/tools/user/profil_user.jsp" />
+                        <sec:authorize access="hasRole('ROLE_ADMIN')">
+                        </sec:authorize>
                         <sec:authorize access="hasRole('ROLE_USER')">
+                            <jsp:include page="./fragments/tools/user/documents.jsp" />
+                        </sec:authorize>
+                        <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
                             <jsp:include page="./fragments/tools/metier/blocnote_user.jsp" />
                         </sec:authorize>
                     </div>
                     <div class="col-xs-8">
                         <div class="panel panel-success">
-                            <div class="panel-heading">Messages</div>
+                            <div class="panel-heading"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                Messages</div>
                             <div class="list-group">
                                 <a href="#" class="list-group-item list-group-item-success">
                                     <div class="row">
@@ -105,7 +111,13 @@
                     </div>
                     <div class="col-xs-2">
                         <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="./fragments/tools/user/tools_user.jsp" />
+                            <jsp:include page="./fragments/tools/administrateur/decompte_user.jsp" />
+                        </sec:authorize>
+                        <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
+                            <jsp:include page="./fragments/tools/metier/tools_user.jsp" />
+                        </sec:authorize>
+                        <sec:authorize access="hasRole('ROLE_ADMIN')">
+                            <jsp:include page="./fragments/tools/administrateur/session_admin.jsp" />
                         </sec:authorize>
                     </div>
                 </div>

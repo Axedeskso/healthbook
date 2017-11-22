@@ -5,8 +5,6 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <%@page session="true"%>
 
-<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
-
 <!DOCTYPE html>
 <html>
     <jsp:include page="../../fragments/header.jsp" />
@@ -22,7 +20,7 @@
                         </sec:authorize>
                     </div>
                     <div class="col-xs-8">
-                        
+                        <iframe src="http://browser.ihtsdotools.org/?perspective=full&conceptId1=404684003&edition=en-edition&release=v20170731&server=http://browser.ihtsdotools.org/api/v1/snomed&langRefset=900000000000509007" width="980px" height="900px"></iframe>
                     </div>
                     <div class="col-xs-2">
                         <sec:authorize access="hasRole('ROLE_USER')">

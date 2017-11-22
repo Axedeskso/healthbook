@@ -20,6 +20,11 @@ public class ToolsController {
         return "outils/nomenclatures/index";
     }
     
+    @RequestMapping(value = "/tools/nomenclatures/snomed", method = RequestMethod.GET)
+    public String snomed(Model model) {
+        return "outils/nomenclatures/snomed";
+    }
+    
     @RequestMapping(value = "/tools/catalogues", method = RequestMethod.GET)
     public String catalogues(Model model) {
         return "outils/catalogues/index";

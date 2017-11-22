@@ -10,13 +10,13 @@
             </div>
         </div>
         <div class="list-group">
-        <a href="${contextPath}/documents/1" class="list-group-item">
-            <div class="row">
-                <div class="col-sm-12">
-                    CR de Biologie
+            <a href="${contextPath}/documents/1" class="list-group-item">
+                <div class="row">
+                    <div class="col-sm-12">
+                        CR de Biologie
+                    </div>
                 </div>
-            </div>
-        </a>
-    </div>
+            </a>
+        </div>
     </div>
 </div>
