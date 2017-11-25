@@ -1,5 +1,6 @@
-package com.fromentin.configuration;
+package com.fromentin.test;
 
+import com.fromentin.configuration.*;
 import java.net.UnknownHostException;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -15,21 +16,18 @@ public class MongoTest {
     public static void main(String[] args) throws IOException {
 
         String adress = "localhost";
-        int port = 27017;        
+        int port = 27017;
         String bdd = "healthbook";
-        
+
         try {
-            Runtime rt = Runtime.getRuntime();
-            Process pr = rt.exec("C://Program Files/MongoDB/Server/3.4/bin/mongod --dbpath C://Users/Axel/mongo/data/db");
-            System.out.println("Processus MongoDB lancé");
             Mongo mongo = new Mongo(adress, port);
-            System.out.println("Connexion avec MongoDB établie sur "+adress+":"+port);
+            System.out.println("Connexion avec MongoDB établie sur " + adress + ":" + port);
 // GET DB
             DB db = mongo.getDB(bdd);
-            System.out.println("Connexion avec la base "+bdd+" établie");
+            System.out.println("Connexion avec la base " + bdd + " établie");
 // GET COLLECTION
             DBCollection collectionUser = db.getCollection("users");
-            
+
             System.out.println("Nettoyage de la collection USER en cours...");
             DBCursor cr = collectionUser.find();
             while (cr.hasNext()) {
@@ -57,7 +55,7 @@ public class MongoTest {
             user2.put("dateNaissance", "31 mars 1993");
             user2.put("lieuNaissance", "Andorre");
             collectionUser.insert(user2);
-            
+
             BasicDBObject user3 = new BasicDBObject();
             user3.put("username", "ctlg");
             user3.put("password", "123456789");
@@ -67,7 +65,6 @@ public class MongoTest {
             user3.put("dateNaissance", "01-01-1990");
             user3.put("lieuNaissance", "Barcelona");
             collectionUser.insert(user3);
-
 
 //GET all documents in collection
             DBCursor cursor = collectionUser.find();

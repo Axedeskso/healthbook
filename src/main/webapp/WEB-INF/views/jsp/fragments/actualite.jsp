@@ -247,7 +247,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user4.jpg" />" class="img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user4.jpg" />" class="img-circle img-responsive">
                 </div>
                 <div class="col-xs-11">
                     <div class="row"><label>Matt DAMON</label> a partagé un article</div>
@@ -299,7 +299,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user5.jpg" />" class="img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user5.jpg" />" class="img-circle img-responsive">
                 </div>
                 <div class="col-xs-11">
                     <div class="row"><label>Serge LAMA</label> a partagé un article</div>
@@ -351,7 +351,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user6.jpg" />" class="img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user6.jpg" />" class="img-circle img-responsive">
                 </div>
                 <div class="col-xs-11">
                     <div class="row"><label>Patrick PELLOUX</label> a partagé un article</div>
@@ -403,7 +403,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user7.jpg" />" class="img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user7.jpg" />" class="img-circle img-responsive">
                 </div>
                 <div class="col-xs-11">
                     <div class="row"><label>Edward SNOWDEN</label> a partagé un article <i class="fa fa-external-link" aria-hidden="true"></i></div>

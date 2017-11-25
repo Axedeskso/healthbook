@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.fromentin.service.HealthbookServiceImpl;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HealthbookController {

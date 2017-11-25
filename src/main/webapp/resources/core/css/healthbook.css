@@ -83,8 +83,21 @@ b{
     border-left: 1px solid #f2f2f2;
     border-right: 1px solid #ffffff;
 }
+
 .nav-tabs>li>a {
     padding: 5px 5px;
+    border: 1px solid mediumseagreen;
+}
+.patientele{
+    padding-bottom: 1%;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    border: 1px solid #3cb371;
+    color: #fff;
+    background-color: #3cb371;
+}
+.nav-tabs {
+    border-bottom: 1px solid #3cb371;
 }
 .btn-search{
     color: #3cb371;

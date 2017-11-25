@@ -26,7 +26,7 @@
                     </div>
                     <div class="col-xs-8">
                         <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
-                            <jsp:include page="./fragments/tools/user/main_content.jsp" />
+                            <jsp:include page="./fragments/tools/metier/patientele.jsp" />
                         </sec:authorize>
                     </div>
                     <div class="col-xs-2">

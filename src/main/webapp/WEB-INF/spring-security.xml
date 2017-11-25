@@ -42,11 +42,5 @@
             </security:user-service>
         </security:authentication-provider>
     </security:authentication-manager>
-    
-<!--    <security:authentication-manager>
-        <security:authentication-provider ref="healthbookAP"/>
-    </security:authentication-manager>
-    
-    <bean id="healthbookAP" class=""></bean>-->
-    
+
 </beans>

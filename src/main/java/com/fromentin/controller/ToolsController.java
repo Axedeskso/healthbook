@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.fromentin.service.HealthbookServiceImpl;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ToolsController {
@@ -49,11 +48,5 @@ public class ToolsController {
     public String thesaurus(Model model) {
         return "outils/thesaurus/index";
     }
-    
-//    @RequestMapping(value = "/tools/nomenclatures/ngap", method = RequestMethod.GET)
-//    public String ngap(Model model) {
-//        return "tools/nomenclatures/ngap";
-//    }
-
 
 }
