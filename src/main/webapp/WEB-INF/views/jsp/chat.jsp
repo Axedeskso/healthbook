@@ -32,7 +32,7 @@
                                 <a href="#" class="list-group-item list-group-item-success">
                                     <div class="row">
                                         <div class="col-xs-1">
-                                            <img src="<c:url value="/resources/core/img/pau.jpg" />" class="img-responsive">
+                                            <img src="<c:url value="/resources/core/img/users/default.png" />" class="img-circle img-responsive img-public">
                                         </div>
                                         <div class="col-xs-11">
                                             <div class="row">
@@ -51,7 +51,7 @@
                                 <a href="#" class="list-group-item">
                                     <div class="row">
                                         <div class="col-xs-1">
-                                            <img src="<c:url value="/resources/core/img/pau.jpg" />" class="img-responsive">
+                                            <img src="<c:url value="/resources/core/img/users/default.png" />" class="img-circle img-responsive img-public">
                                         </div>
                                         <div class="col-xs-11">
                                             <div class="row">
@@ -70,7 +70,7 @@
                                 <a href="#" class="list-group-item">
                                     <div class="row">
                                         <div class="col-xs-1">
-                                            <img src="<c:url value="/resources/core/img/pau.jpg" />" class="img-responsive">
+                                            <img src="<c:url value="/resources/core/img/users/default.png" />" class="img-circle img-responsive img-public">
                                         </div>
                                         <div class="col-xs-11">
                                             <div class="row">
@@ -89,7 +89,7 @@
                                 <a href="#" class="list-group-item">
                                     <div class="row">
                                         <div class="col-xs-1">
-                                            <img src="<c:url value="/resources/core/img/pau.jpg" />" class="img-responsive">
+                                            <img src="<c:url value="/resources/core/img/users/default.png" />" class="img-circle img-responsive img-public">
                                         </div>
                                         <div class="col-xs-11">
                                             <div class="row">

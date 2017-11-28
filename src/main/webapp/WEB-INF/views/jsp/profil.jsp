@@ -15,7 +15,7 @@
                 <div class="row">
                     <div class="col-xs-2">
                         <jsp:include page="./fragments/tools/user/profil_user.jsp" />
-                         <sec:authorize access="hasRole('ROLE_USER')">
+                        <sec:authorize access="hasRole('ROLE_USER')">
                             <jsp:include page="./fragments/tools/user/documents.jsp" />
                         </sec:authorize>
                         <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
@@ -26,119 +26,67 @@
                         <div class="panel panel-success">
                             <div class="panel-heading"><i class="fa fa-user-o" aria-hidden="true"></i> Profil
                             </div>
-                            <div class="list-group">
-                                <div class="list-group-item">
+                            <div class="panel-body">
+                                <div class="row">
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item">
+                                            <a data-toggle="tab" href="#tab_perso">Personnel</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a data-toggle="tab" href="#tab_pro">Professionnel</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a data-toggle="tab" href="#tab_sante">Santé</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content">
+                                <div class="tab-pane fade in" id="tab_perso">
                                     <div class="row">
-                                    <h3>Informations personnelles</h3>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-xs-6">
                                             <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>Nom</label>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    GARCIA GOZALVEZ
-                                                </div>
+                                                <div class="col-xs-6"><label>Nom</label></div>
+                                                <div class="col-xs-6">GARCIA GOZALVEZ</div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>Prenom</label>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    Pau
-                                                </div>
+                                                <div class="col-xs-6"><label>Prenom</label></div>
+                                                <div class="col-xs-6">Pau</div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-xs-6">
                                             <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>Date de naissance</label>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    18 avril 1995
-                                                </div>
+                                                <div class="col-xs-6"><label>Date de naissance</label></div>
+                                                <div class="col-xs-6">18 avril 1995</div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>Lieu de naissance</label>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    Barcelone, Espagne
-                                                </div>
+                                                <div class="col-xs-6"><label>Lieu de naissance</label></div>
+                                                <div class="col-xs-6">Barcelona, Espagne <img src="<c:url value="/resources/core/img/flags/es.png" />" class="flag"/></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="list-group-item">
+                                <div class="tab-pane fade in" id="tab_pro">
                                     <div class="row">
-                                    <h3>Informations usuelles</h3>
+                                        <h4>Informations professionnelles</h4>
                                     </div>
+                                </div>
+                                <div class="tab-pane fade in" id="tab_sante">
                                     <div class="row">
-                                        <div class="col-sm-6">
+                                        <div class="col-xs-6">
                                             <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>N° securité sociale</label>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    987321654
-                                                </div>
+                                                <div class="col-xs-6"><label>N° Sécurité sociale</label></div>
+                                                <div class="col-xs-6">0123456789</div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
+                                        <div class="col-xs-6">
                                             <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>Mutuelle</label>
-                                                </div>
-                                                <div class="col-sm-6">SMENO</div>
+                                                <div class="col-xs-6"><label>Mutuelle</label></div>
+                                                <div class="col-xs-6">SMENO</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="list-group-item">
-                                    <div class="row">
-                                    <h3>Informations professionnelles</h3>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>Metier</label>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    ${pageContext.request.userPrincipal.authorities}
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>RPPS</label>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    123456789
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>Mis en fonction</label>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    04 septembre 2015
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>Lieu</label>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    CHL, Ecole d'ingénieur ISIS, Castres, France
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>   
+                            </div>
                             </div>
                         </div>
                     </div>

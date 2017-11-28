@@ -14,9 +14,8 @@ public class AdministratorController {
     HealthbookServiceImpl healthbook_service;
 
     @RequestMapping(value = "/administration", method = RequestMethod.GET)
-    public String admin(Model model) {
-        model.addAttribute("adm", "Partie ADMINISTRATION");
-        return "index";
+    public String admin(Model model) {      
+        return "administration";
     }
 
 }

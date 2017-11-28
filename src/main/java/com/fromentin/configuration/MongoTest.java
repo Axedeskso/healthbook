@@ -5,7 +5,7 @@ import com.mongodb.Mongo;
 import com.mongodb.MongoException;
 import java.io.IOException;
 
-public class MongoConfig {
+public class MongoTest {
 
     public static void main(String[] args) throws IOException {
 

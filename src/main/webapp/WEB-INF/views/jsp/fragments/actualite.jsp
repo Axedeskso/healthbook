@@ -5,7 +5,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-sm-1">
-                    <img src="<c:url value="/resources/core/img/users/user2.jpg" />" class="img-circle img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user2.jpg" />" class="img-circle img-responsive img-public">
                 </div>
                 <div class="col-sm-11">
                     <div class="row"><label>Jorge Mario BERGOGLIO</label> a partagé un article</div>
@@ -24,19 +24,17 @@
                     <a href="" data-toggle="modal" data-target="#act1">
                         <div class="container-fluid carte">
                             <img class="card-img-top img-responsive" src="<c:url value="/resources/core/img/actu/actu2.jpg" />" >
-<!--                            <div class="card-block">-->
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <h4 class="card-title"><label>Dernier message avant la fin du monde</label></h4>
-                                    </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <h4 class="card-title"><label>Dernier message avant la fin du monde</label></h4>
                                 </div>
-                            <!--</div>-->
+                            </div>
                         </div>
                     </a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-sm-12">
                     <button class="btn btn-xs btn-success"><i class="fa fa-heart" aria-hidden="true"></i> 7G</button>
                     <button class="btn btn-xs btn-success"><i class="fa fa-comments" aria-hidden="true"></i> 6.5G</button>
                     <button class="btn btn-xs btn-success"><i class="fa fa-share" aria-hidden="true"></i> 240k</button>
@@ -114,7 +112,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user1.jpg" />" class="img-circle img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user1.jpg" />" class="img-circle img-responsive img-public">
                 </div>
                 <div class="col-xs-11">
                     <div class="row"><label>Hervé PINGAUD</label> a partagé un article</div>
@@ -195,7 +193,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user3.jpg" />" class="img-circle img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user3.jpg" />" class="img-circle img-responsive img-public">
                 </div>
                 <div class="col-xs-11">
                     <div class="row"><label>Didier DESCHAMPS</label> a partagé un article</div>
@@ -247,7 +245,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user4.jpg" />" class="img-circle img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user4.jpg" />" class="img-circle img-responsive img-public">
                 </div>
                 <div class="col-xs-11">
                     <div class="row"><label>Matt DAMON</label> a partagé un article</div>
@@ -299,7 +297,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user5.jpg" />" class="img-circle img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user5.jpg" />" class="img-circle img-responsive img-public">
                 </div>
                 <div class="col-xs-11">
                     <div class="row"><label>Serge LAMA</label> a partagé un article</div>
@@ -351,7 +349,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user6.jpg" />" class="img-circle img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user6.jpg" />" class="img-circle img-responsive img-public">
                 </div>
                 <div class="col-xs-11">
                     <div class="row"><label>Patrick PELLOUX</label> a partagé un article</div>
@@ -403,7 +401,7 @@
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-1">
-                    <img src="<c:url value="/resources/core/img/users/user7.jpg" />" class="img-circle img-responsive">
+                    <img src="<c:url value="/resources/core/img/users/user7.jpg" />" class="img-circle img-responsive img-public">
                 </div>
                 <div class="col-xs-11">
                     <div class="row"><label>Edward SNOWDEN</label> a partagé un article <i class="fa fa-external-link" aria-hidden="true"></i></div>
