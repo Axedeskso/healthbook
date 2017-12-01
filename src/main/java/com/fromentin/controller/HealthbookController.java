@@ -29,6 +29,11 @@ public class HealthbookController {
         return "documents";
     }
     
+    @RequestMapping(value = "/securite", method = RequestMethod.GET)
+    public String securits(Model model) {
+        return "securite";
+    }    
+    
     @RequestMapping(value = "/documents/1", method = RequestMethod.GET)
     public String document(Model model) {
         return "document";

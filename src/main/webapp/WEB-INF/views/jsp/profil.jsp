@@ -9,18 +9,12 @@
 <html>
     <jsp:include page="./fragments/header.jsp" />
     <body>
-        <jsp:include page="./fragments/navbar/user/nav_user.jsp" />
+        <jsp:include page="./fragments/navbar/nav_user.jsp" />
         <div class="container-fluid" id="page-content-wrapper" style="padding-top: 4%;">
             <div class="page-content">
                 <div class="row">
                     <div class="col-xs-2">
-                        <jsp:include page="./fragments/tools/user/profil_user.jsp" />
-                        <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="./fragments/tools/user/documents.jsp" />
-                        </sec:authorize>
-                        <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
-                            <jsp:include page="./fragments/tools/metier/blocnote_user.jsp" />
-                        </sec:authorize>
+                        <jsp:include page="./fragments/navbar/sidebar_left.jsp" />
                     </div>
                     <div class="col-xs-8">
                         <div class="panel panel-success">
@@ -41,65 +35,57 @@
                                     </ul>
                                 </div>
                                 <div class="tab-content">
-                                <div class="tab-pane fade in" id="tab_perso">
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <div class="row">
-                                                <div class="col-xs-6"><label>Nom</label></div>
-                                                <div class="col-xs-6">GARCIA GOZALVEZ</div>
+                                    <div class="tab-pane fade in" id="tab_perso">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <div class="row">
+                                                    <div class="col-xs-6"><label>Nom</label></div>
+                                                    <div class="col-xs-6">GARCIA GOZALVEZ</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-6"><label>Prenom</label></div>
+                                                    <div class="col-xs-6">Pau</div>
+                                                </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-xs-6"><label>Prenom</label></div>
-                                                <div class="col-xs-6">Pau</div>
+                                            <div class="col-xs-6">
+                                                <div class="row">
+                                                    <div class="col-xs-6"><label>Date de naissance</label></div>
+                                                    <div class="col-xs-6">18 avril 1995</div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-6"><label>Lieu de naissance</label></div>
+                                                    <div class="col-xs-6">Barcelona, Espagne <img src="<c:url value="/resources/core/img/flags/es.png" />" class="flag"/></div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-xs-6">
-                                            <div class="row">
-                                                <div class="col-xs-6"><label>Date de naissance</label></div>
-                                                <div class="col-xs-6">18 avril 1995</div>
+                                    </div>
+                                    <div class="tab-pane fade in" id="tab_pro">
+                                        <div class="row">
+                                            <h4>Informations professionnelles</h4>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade in" id="tab_sante">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <div class="row">
+                                                    <div class="col-xs-6"><label>N° Sécurité sociale</label></div>
+                                                    <div class="col-xs-6">0123456789</div>
+                                                </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col-xs-6"><label>Lieu de naissance</label></div>
-                                                <div class="col-xs-6">Barcelona, Espagne <img src="<c:url value="/resources/core/img/flags/es.png" />" class="flag"/></div>
+                                            <div class="col-xs-6">
+                                                <div class="row">
+                                                    <div class="col-xs-6"><label>Mutuelle</label></div>
+                                                    <div class="col-xs-6">SMENO</div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade in" id="tab_pro">
-                                    <div class="row">
-                                        <h4>Informations professionnelles</h4>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade in" id="tab_sante">
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <div class="row">
-                                                <div class="col-xs-6"><label>N° Sécurité sociale</label></div>
-                                                <div class="col-xs-6">0123456789</div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xs-6">
-                                            <div class="row">
-                                                <div class="col-xs-6"><label>Mutuelle</label></div>
-                                                <div class="col-xs-6">SMENO</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-2">
-                        <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="./fragments/tools/administrateur/decompte_user.jsp" />
-                        </sec:authorize>
-                        <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
-                            <jsp:include page="./fragments/tools/metier/tools_user.jsp" />
-                        </sec:authorize>
-                        <sec:authorize access="hasRole('ROLE_ADMIN')">
-                            <jsp:include page="./fragments/tools/administrateur/session_admin.jsp" />
-                        </sec:authorize>
+                        <jsp:include page="./fragments/navbar/sidebar_right.jsp" />
                     </div>
                 </div>
             </div>    

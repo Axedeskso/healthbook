@@ -11,15 +11,12 @@
 <html>
     <jsp:include page="./fragments/header.jsp" />
     <body>
-        <jsp:include page="./fragments/navbar/user/nav_user.jsp" />
+        <jsp:include page="./fragments/navbar/nav_user.jsp" />
         <div class="container-fluid" id="page-content-wrapper" style="padding-top: 4%;">
             <div class="page-content">
                 <div class="row">
                     <div class="col-xs-2">
-                        <jsp:include page="./fragments/tools/user/profil_user.jsp" />
-                        <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="./fragments/tools/user/documents.jsp" />
-                        </sec:authorize>
+                        <jsp:include page="./fragments/navbar/sidebar_left.jsp" />
                     </div>
                     <div class="col-xs-8">
                         <sec:authorize access="hasRole('ROLE_USER')">
@@ -27,9 +24,7 @@
                         </sec:authorize>
                     </div>
                     <div class="col-xs-2">
-                        <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="./fragments/tools/administrateur/decompte_user.jsp" />
-                        </sec:authorize>
+                        <jsp:include page="./fragments/navbar/sidebar_right.jsp" />
                     </div>
                 </div>
             </div>    

@@ -1,15 +1,10 @@
 package com.fromentin.security;
 
 import java.util.List;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.userdetails.UserDetails;
 
-@Document(collection="users")
 public class HealthbookUser implements UserDetails  {
 
-    @Id
-    private String id;
     private String username;
     private String civilite;
     private String firstName;
@@ -30,14 +25,6 @@ public class HealthbookUser implements UserDetails  {
         this.civilite = civilite;
         this.firstName = firstName;
         this.lastName = lastName;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getUsername() {
