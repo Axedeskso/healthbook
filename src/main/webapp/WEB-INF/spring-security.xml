@@ -8,9 +8,9 @@
 	http://www.springframework.org/schema/security 
 	http://www.springframework.org/schema/security/spring-security.xsd
 	http://www.springframework.org/schema/context
-    http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd">
     
-    <context:component-scan base-package="com.fromentin.security" />
+    <!--    <context:component-scan base-package="com.fromentin.security" />-->
     <context:component-scan base-package="com.fromentin.service" />
     <context:component-scan base-package="com.fromentin.ws" />
     
@@ -31,16 +31,23 @@
                 
     </security:http>
 
-    <security:authentication-manager>
-        <security:authentication-provider>
-            <security:user-service>
-                <security:user name="admin" password="admin" authorities="ROLE_ADMIN,ROLE_USER,ROLE_PHARMACIEN,ROLE_MEDECIN" />
-                <security:user name="test" password="test" authorities="ROLE_USER" />
-                <security:user name="pharma" password="pharma" authorities="ROLE_USER,ROLE_PHARMACIEN" />
-                <security:user name="medecin" password="mg" authorities="ROLE_USER,ROLE_MEDECIN" />
-                <security:user name="inta" password="ia" authorities="ROLE_IA" />
-            </security:user-service>
-        </security:authentication-provider>
+        <security:authentication-manager>
+    <security:authentication-provider>
+        <security:user-service>
+            <security:user name="admin" password="admin" authorities="ROLE_ADMIN,ROLE_USER,ROLE_PHARMACIEN,ROLE_MEDECIN" />
+            <security:user name="test" password="test" authorities="ROLE_USER" />
+            <security:user name="pharma" password="pharma" authorities="ROLE_USER,ROLE_PHARMACIEN" />
+            <security:user name="medecin" password="mg" authorities="ROLE_USER,ROLE_MEDECIN" />
+            <security:user name="inta" password="ia" authorities="ROLE_IA" />
+        </security:user-service>
+    </security:authentication-provider>
+        
     </security:authentication-manager>
+<!--    <security:authentication-manager>
+        <security:authentication-provider user-service-ref="mongoUserDetailsService">
+            <security:password-encoder hash="plaintext" />
+        </security:authentication-provider>
+    </security:authentication-manager>-->
+	
 
 </beans>
