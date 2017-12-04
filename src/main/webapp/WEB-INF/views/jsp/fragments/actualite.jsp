@@ -4,11 +4,11 @@
     <div class="panel panel-success">
         <div class="panel-heading">
             <div class="row">
-                <div class="col-sm-1">
+                <div class="col-lg-1 col-xs-4">
                     <img src="<c:url value="/resources/core/img/users/user2.jpg" />" class="img-circle img-responsive img-public">
                 </div>
-                <div class="col-sm-11">
-                    <div class="row"><label>Jorge Mario BERGOGLIO</label> a partagé un article</div>
+                <div class="col-xs-11 col-xs-8">
+                    <div class="row"><b>Jorge Mario BERGOGLIO</b> a partagé un article</div>
                     <div class="row"><small>15 novembre 2017 <i class="fa fa-external-link" aria-hidden="true"></i></small></div>
                 </div>
             </div>

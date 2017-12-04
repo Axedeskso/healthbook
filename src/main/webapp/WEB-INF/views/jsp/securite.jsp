@@ -1,5 +1,3 @@
-<%@page import="com.fromentin.security.HealthbookUser"%>
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          isELIgnored="false" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -30,6 +28,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="col-xs-2">
                         <jsp:include page="./fragments/navbar/sidebar_right.jsp" />
@@ -38,5 +37,6 @@
             </div>    
         </div>
         <jsp:include page="./fragments/footer.jsp" />
+        <jsp:include page="./fragments/end.jsp" />
     </body>
 </html>

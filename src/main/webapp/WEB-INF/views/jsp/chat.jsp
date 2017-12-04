@@ -108,5 +108,6 @@
             </div>    
         </div>
         <jsp:include page="./fragments/footer.jsp" />
+        <jsp:include page="./fragments/end.jsp" />
     </body>
 </html>
