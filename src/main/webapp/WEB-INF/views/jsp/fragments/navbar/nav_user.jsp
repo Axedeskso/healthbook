@@ -142,6 +142,7 @@
                             <a href="#"><div class="row">Paramètres <span class="glyphicon glyphicon-cog pull-right"></span></div>
                             </a>
                         </li>
+                        <li role="separator" class="divider"></li>
                         <li>
                             <a href="${contextPath}/login?logout"><div class="row">Déconnexion <span class="glyphicon glyphicon-remove-sign pull-right"></span></div>
                             </a>

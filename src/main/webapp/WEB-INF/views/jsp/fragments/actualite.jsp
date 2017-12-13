@@ -8,8 +8,8 @@
                     <img src="<c:url value="/resources/core/img/users/user2.jpg" />" class="img-circle img-responsive img-public">
                 </div>
                 <div class="col-xs-11 col-xs-8">
-                    <div class="row"><b>Jorge Mario BERGOGLIO</b> a partagé un article</div>
-                    <div class="row"><small>15 novembre 2017 <i class="fa fa-external-link" aria-hidden="true"></i></small></div>
+                    <div class="row"><label>Jorge Mario BERGOGLIO</label> a partagé un article <i class="fa fa-external-link" aria-hidden="true"></i></div>
+                    <div class="row"><small>15 novembre 2017 </small> <i class="fa fa-universal-access" aria-hidden="true"></i></div>
                 </div>
             </div>
         </div>
@@ -35,9 +35,9 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <button class="btn btn-xs btn-success"><i class="fa fa-heart" aria-hidden="true"></i> 7G</button>
-                    <button class="btn btn-xs btn-success"><i class="fa fa-comments" aria-hidden="true"></i> 6.5G</button>
-                    <button class="btn btn-xs btn-success"><i class="fa fa-share" aria-hidden="true"></i> 240k</button>
+                    <span class="label label-success"><i class="fa fa-heart" aria-hidden="true"></i> 7G</span>
+                    <span class="label label-success"><i class="fa fa-comments" aria-hidden="true"></i> 6.5G</span>
+                    <span class="label label-success"><i class="fa fa-share" aria-hidden="true"></i> 240k</span>
                 </div>
             </div>
         </div>

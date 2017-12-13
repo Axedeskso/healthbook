@@ -1,4 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         isELIgnored="false" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+<%@page session="true"%>
 
 <div class="row">
     <div class="panel panel-success">
@@ -11,46 +16,43 @@
             <div class="row">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_patient">Patient</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_patient">Patient</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_document">Document</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_document">Document</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_confidentialite">Confidentialité</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_confidentialite">ConfidentialitÃ©</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_acte">Acte</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_acte">Acte</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_auteur">Auteur</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_auteur">Auteur</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_rencontre">Rencontre</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_rencontre">Rencontre</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_prescripteur">Prescripteur</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_prescripteur">Prescripteur</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_approbateurs">Approbateur(s)</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_approbateurs">Approbateur(s)</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_signataire">Signataire</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_signataire">Signataire</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_structure">Structure</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_structure">Structure</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_references">Références</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_references">RÃ©fÃ©rences</a>
                     </li>
                     <li class="nav-item">
-                        <a data-toggle="tab" href="#menu_resultats">Résultats</a>
+                        <a class="nav-link" data-toggle="tab" href="#menu_resultats">RÃ©sultats</a>
                     </li>
                 </ul>
             </div>
-
-
-
             <div class="tab-content">
                 <div class="tab-pane fade in" id="menu_patient">
                     <jsp:include page="./patient.jsp" />

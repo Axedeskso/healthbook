@@ -1,5 +1,3 @@
-<%@page import="com.fromentin.security.HealthbookUser"%>
-<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          isELIgnored="false" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -12,7 +10,7 @@
     <jsp:include page="./fragments/header.jsp" />
     <body>
         <jsp:include page="./fragments/navbar/nav_user.jsp" />
-        <div class="container-fluid" id="page-content-wrapper" style="padding-top: 4%;">
+        <div class="container-fluid" id="page-content-wrapper">
             <div class="page-content">
                 <div class="row">
                     <div class="col-xs-2">
@@ -30,5 +28,6 @@
             </div>    
         </div>
         <jsp:include page="./fragments/footer.jsp" />
+        <jsp:include page="./fragments/end.jsp" />
     </body>
 </html>

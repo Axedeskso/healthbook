@@ -5,10 +5,6 @@
  */
 package com.fromentin.ws;
 
-import org.springframework.stereotype.Repository;
-
-@Repository
 public class HealthbookWSImpl implements HealthbookWS {
-
 
 }

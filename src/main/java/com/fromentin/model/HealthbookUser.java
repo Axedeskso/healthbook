@@ -1,8 +1,5 @@
 package com.fromentin.model;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = "user")
 public class HealthbookUser {
 
     private String id;
