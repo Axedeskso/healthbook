@@ -17,18 +17,7 @@
                         <jsp:include page="./fragments/navbar/sidebar_left.jsp" />
                     </div>
                     <div class="col-xs-8">
-                        <div class="row">
-                            <div class="col-xs-8">
-                                test
-                            </div>
-                            <div class="col-xs-4">
-                                <div class="wrapper">
-                                    <input type="checkbox" name="toggle" id="toggle">
-                                    <label for="toggle"></label>
-                                </div>
-                            </div>
-                        </div>
-                        
+                        <jsp:include page="./fragments/securite.jsp" />
                     </div>
                     <div class="col-xs-2">
                         <jsp:include page="./fragments/navbar/sidebar_right.jsp" />

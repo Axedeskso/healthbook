@@ -35,8 +35,8 @@
                                             <div class="col-sm-2">
                                                 CdAM
                                             </div>
-                                            <div class="col-sm-10">
-                                                
+                                            <div class="col-sm-10 description">
+                                                Catalogue des Actes Médicaux
                                             </div>
                                         </div>
                                     </a>
@@ -45,8 +45,8 @@
                                             <div class="col-sm-2">
                                                 CdARR
                                             </div>
-                                            <div class="col-sm-10">
-                                                
+                                            <div class="col-sm-10 description">
+                                                Catalogue des Actes de Rééducation et Réadaptation
                                             </div>
                                         </div>
                                     </a>

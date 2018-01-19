@@ -5,8 +5,8 @@
 
 <sec:authorize access="hasRole('ROLE_USER')">
     <jsp:include page="../../fragments/tools/user/profil_user.jsp" />
-    <jsp:include page="../../fragments/tools/user/security.jsp" />
     <jsp:include page="../../fragments/tools/user/documents.jsp" />
+    <jsp:include page="../../fragments/tools/user/security.jsp" />
 </sec:authorize>
 
 <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">

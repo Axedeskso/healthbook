@@ -12,7 +12,7 @@
     <jsp:include page="../../fragments/header.jsp" />
     <body>
         <jsp:include page="../../fragments/navbar/nav_user.jsp" />
-        <div class="container-fluid" id="page-content-wrapper" style="padding-top: 4%;">           
+        <div class="container-fluid" id="page-content-wrapper">           
             <div class="page-content">
                 <div class="row">
                     <div class="col-xs-2">
@@ -28,6 +28,9 @@
                                     <div class="row">
                                         <i class="fa fa-list" aria-hidden="true"></i> Catalogues
                                     </div>
+                                </div>
+                                <div class="panel-body">
+                                    Recueil de concepts ou d'expressions. Mise en évidence des liens entre entités organisées en structures hierarchiques
                                 </div>
                                 <div class="list-group">
                                     <a href="#" class="list-group-item">

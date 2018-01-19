@@ -14,7 +14,7 @@
                     <form name="loginForm" action="${loginUrl}" method='POST'>
                         <div class="form-group">
                             <div class="row">
-                                <div class="col-sm-12"><h1><span class="label label-success">Healthbook</span></h1></div>
+                                <div class="col-sm-12"><h1 class="text-success text-center"><span class="label label-success">Healthbook</span></h1></div>
                             </div>
                         </div>
                         <c:if test="${not empty error}">
@@ -54,7 +54,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
-                                    <button type="submit" name="submit" value="submit"class="btn btn-success">
+                                    <button type="submit" name="submit" value="submit"class="btn btn-success btn-block">
                                         Connexion
                                     </button>
                                 </div>

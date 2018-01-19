@@ -29,14 +29,15 @@
                                         <i class="fa fa-list" aria-hidden="true"></i> Catalogues
                                     </div>
                                 </div>
+                                <div class="panel-body">Répartition des objets par classes. Construction autour d'un principe de différentiation</div>
                                 <div class="list-group">
                                     <a href="#" class="list-group-item">
                                         <div class="row">
                                             <div class="col-sm-2">
                                                 CCAM
                                             </div>
-                                            <div class="col-sm-10">
-                                                
+                                            <div class="col-sm-10 description">
+                                                Classification Commune des Actes Médicaux
                                             </div>
                                         </div>
                                     </a>
@@ -45,8 +46,8 @@
                                             <div class="col-sm-2">
                                                 CIM-10
                                             </div>
-                                            <div class="col-sm-10">
-                                                
+                                            <div class="col-sm-10 description">
+                                                Classification Internationale des Maladies (Revision 10)
                                             </div>
                                         </div>
                                     </a>

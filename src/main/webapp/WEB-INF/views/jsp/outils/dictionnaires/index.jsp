@@ -22,7 +22,21 @@
                         </sec:authorize>
                     </div>
                     <div class="col-xs-8">
-                        
+                        <div class="row">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <i class="fa fa-list" aria-hidden="true"></i> Dictionnaire
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    Recueil de mots rangé par ordre alphabétique et suivi de leur définition
+                                </div>
+                                <div class="list-group">
+                                
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-xs-2">
                         <sec:authorize access="hasRole('ROLE_USER')">

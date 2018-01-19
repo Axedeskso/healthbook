@@ -29,14 +29,17 @@
                                         <i class="fa fa-list" aria-hidden="true"></i> Nomenclatures
                                     </div>
                                 </div>
+                                <div class="panel-body">
+                                    Ensemble des termes méthodiquement classés.
+                                </div>
                                 <div class="list-group">
                                     <a href="#" class="list-group-item">
                                         <div class="row">
                                             <div class="col-sm-2">
                                                 NGAP
                                             </div>
-                                            <div class="col-sm-10">
-                                                
+                                            <div class="col-sm-10 description">
+                                                Nomemclature Générale des Actes Professionnels
                                             </div>
                                         </div>
                                     </a>
@@ -45,8 +48,8 @@
                                             <div class="col-sm-2">
                                                 NABM
                                             </div>
-                                            <div class="col-sm-10">
-                                                
+                                            <div class="col-sm-10 description">
+                                                Nomemclature des Actes de Biologie Médicale
                                             </div>
                                         </div>
                                     </a>
