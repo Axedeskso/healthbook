@@ -40,65 +40,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-xs-1">
-                                            <img src="<c:url value="/resources/core/img/users/default.png" />" class="img-circle img-responsive img-public">
-                                        </div>
-                                        <div class="col-xs-11">
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <label>Docteur PIM</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    Message n°2
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-xs-1">
-                                            <img src="<c:url value="/resources/core/img/users/default.png" />" class="img-circle img-responsive img-public">
-                                        </div>
-                                        <div class="col-xs-11">
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <label>Docteur PAM</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    Message n°3
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item">
-                                    <div class="row">
-                                        <div class="col-xs-1">
-                                            <img src="<c:url value="/resources/core/img/users/default.png" />" class="img-circle img-responsive img-public">
-                                        </div>
-                                        <div class="col-xs-11">
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    <label>Docteur POUM</label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-xs-12">
-                                                    Message n°4
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
                             </div>
-
                         </div>
                     </div>
                     <div class="col-xs-2">

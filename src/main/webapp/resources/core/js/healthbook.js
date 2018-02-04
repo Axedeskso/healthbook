@@ -1,4 +1,5 @@
-$(document).ready(function () {
+
+$(document).ready(function () {    
     $('#btn-daynight').click(function () {
         if ($('body').hasClass('night')) {
             $('body').removeClass('night');

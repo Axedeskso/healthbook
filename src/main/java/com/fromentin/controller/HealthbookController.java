@@ -19,6 +19,11 @@ public class HealthbookController {
         return "profil";
     }
     
+    @RequestMapping(value = "/help", method = RequestMethod.GET)
+    public String help(Model model) {
+        return "help";
+    }
+    
     @RequestMapping(value = "/clients", method = RequestMethod.GET)
     public String clients(Model model) {
         return "clients";

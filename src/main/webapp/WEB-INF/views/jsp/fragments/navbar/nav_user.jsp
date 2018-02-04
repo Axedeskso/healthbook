@@ -20,18 +20,6 @@
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <!--            <form class="navbar-form navbar-left">
-            
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Rechercher">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-light btn-search" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                                </span>
-            
-                            </div>
-                        </form>-->
-
-
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="${contextPath}/profil"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Profil</a></li>
                     <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
@@ -39,18 +27,17 @@
                     </sec:authorize>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <span class="glyphicon glyphicon-envelope"></span><span class="badge messages">4</span>
-
+                        <span class="glyphicon glyphicon-envelope"></span><!--<span class="badge messages">4</span>-->
                     </a>
                     <ul class="dropdown-menu messenger-panel">
-                        <li>
+                        <!--<li>
                             <a href="#">
                                 <div class="row">
                                     <div class="col-sm-12"><span class="badge">4</span> nouveaux messages</div>
                                 </div>
                             </a>
                         </li>
-                        <li role="separator" class="divider"></li>
+                        <li role="separator" class="divider"></li>-->
                         <li  class="list-group-item-success">
                             <a href="#">
                                 <div class="row">
@@ -68,57 +55,6 @@
                                 </div>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-sm-2 img_messenger">
-                                        <img src="<c:url value="/resources/core/img/users/default.png" />" class="img-circle img-responsive">
-                                    </div>
-                                    <div class="col-sm-10 ">
-                                        <div class="row">
-                                            <div class="col-sm-11">Docteur PIM</div>
-                                            <div class="col-sm-1"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12 small">Message n°2</div>
-                                        </div></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-sm-2 img_messenger">
-                                        <img src="<c:url value="/resources/core/img/users/default.png" />" class="img-circle img-responsive">
-                                    </div>
-                                    <div class="col-sm-10 ">
-                                        <div class="row">
-                                            <div class="col-sm-11">Docteur PAM</div>
-                                            <div class="col-sm-1"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12 small">Message n°3</div>
-                                        </div></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <div class="row">
-                                    <div class="col-sm-2 img_messenger">
-                                        <img src="<c:url value="/resources/core/img/users/default.png" />" class="img-circle img-responsive">
-                                    </div>
-                                    <div class="col-sm-10 ">
-                                        <div class="row">
-                                            <div class="col-sm-11">Docteur POUM</div>
-                                            <div class="col-sm-1"></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm-12 small">Message n°4</div>
-                                        </div></div>
-                                </div>
-                            </a>
-                        </li>
                         <li role="separator" class="divider"></li>
                         <li>
                             <a href="${contextPath}/chat">
@@ -129,7 +65,7 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span></a></li>
+                <li><a href="${contextPath}/help"><span class="glyphicon glyphicon-question-sign"></span></a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
