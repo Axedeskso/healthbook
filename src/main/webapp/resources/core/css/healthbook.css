@@ -12,6 +12,10 @@ body{
     font-family: Maven Pro regular;
     background-color: #efefef;
 }
+.fond_ia{
+    background-color: #000;
+    overflow: hidden;
+}
 a, a:hover, a:focus {
     color: mediumseagreen;
     text-decoration: none;

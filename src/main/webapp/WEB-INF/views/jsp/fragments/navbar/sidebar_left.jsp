@@ -3,8 +3,10 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
-<sec:authorize access="hasRole('ROLE_USER')">
+<sec:authorize access="hasRole('ROLE_USER') || hasRole('ROLE_ADMIN')">
     <jsp:include page="../../fragments/tools/user/profil_user.jsp" />
+</sec:authorize>
+<sec:authorize access="hasRole('ROLE_USER')">
     <jsp:include page="../../fragments/tools/user/documents.jsp" />
     <jsp:include page="../../fragments/tools/user/security.jsp" />
 </sec:authorize>

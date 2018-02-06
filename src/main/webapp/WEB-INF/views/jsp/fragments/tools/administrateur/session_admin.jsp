@@ -12,7 +12,7 @@
                 Demarrer la session
             </div>
             <div class="col-xs-2">
-                <button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-play-circle"></span></button>
+                <button class="btn btn-success btn-xs" id="btn-launch" ><span class="glyphicon glyphicon-play-circle"></span></button>
             </div>
         </div>
     </div>

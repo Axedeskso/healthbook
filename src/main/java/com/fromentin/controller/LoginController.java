@@ -1,6 +1,7 @@
 package com.fromentin.controller;
 
 import com.fromentin.service.HealthbookServiceImpl;
+import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,8 +15,12 @@ public class LoginController {
     @Autowired
     HealthbookServiceImpl healthbook_service;
     
+    Date date;
+    
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home(Model model) {
+        date = new Date();
+        model.addAttribute("date", date);
         return "index";
     }
 
