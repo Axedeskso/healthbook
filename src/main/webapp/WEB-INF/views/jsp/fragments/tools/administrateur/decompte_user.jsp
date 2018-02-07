@@ -16,6 +16,7 @@
 
     <div class="list-group">
         <div href="#" class="list-group-item">
+            ${debut}
             <div class="row">
                 <div class="col-xs-12">
                     <div class="row">
@@ -26,6 +27,7 @@
                     </div>
                 </div>
             </div>
+            ${fin}
         </div>      
     </div>
 </div>

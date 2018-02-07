@@ -21,7 +21,6 @@
                     <div class="row">
                         <div class="col-lg-2 hidden-sm">
                             <jsp:include page="./fragments/navbar/sidebar_left.jsp" />
-                            ${date}
                         </div>
                         <div class="col-lg-8 col-sm-12">
                             <sec:authorize access="hasRole('ROLE_USER')">
