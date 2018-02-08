@@ -10,7 +10,21 @@
 
     <sec:authorize access="hasRole('ROLE_IA')">
         <body class="fond_ia">
-            <video id="video_ia" loop width="100%" autoplay="true" src="http://192.168.10.2:8080/videos/BP1.mp4"></video>                    
+            <audio autoplay loop volume="0.5">
+                <source src="http://192.168.10.2:8080/audio/theme.wav" type="audio/wav">
+                Erreur
+            </audio>
+            <video id="video_ia" width="100%" autoplay loop>
+                <source id="source_ia" src="http://192.168.10.2:8080/videos/BP1.mp4" type='video/mp4' />
+            </video>
+            <input type="hidden" id="target" value='${annee}'/>
+            <div class="row" id="footer_ia">
+                <div class="col-lg-12" id="countdown">
+                    <div class="col-xs-12"></div>
+                    <label><span id="countdown_hour">00</span>:<span id="countdown_min" >00</span>:<span id="countdown_sec" >00</span></label>
+                </div>
+            </div>
+            <jsp:include page="./fragments/end.jsp" />
         </body>
     </sec:authorize>
     <sec:authorize access="hasRole('ROLE_USER') || hasRole('ROLE_ADMIN')">

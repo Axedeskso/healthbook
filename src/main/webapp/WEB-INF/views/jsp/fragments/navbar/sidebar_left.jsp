@@ -10,7 +10,9 @@
     <jsp:include page="../../fragments/tools/user/documents.jsp" />
     <jsp:include page="../../fragments/tools/user/security.jsp" />
 </sec:authorize>
-
+<sec:authorize access="hasRole('ROLE_ADMIN')">
+    <jsp:include page="../../fragments/tools/administrateur/supervision.jsp" />
+</sec:authorize>
 <sec:authorize access="hasRole('ROLE_MEDECIN') or hasRole('ROLE_PHARMACIEN')">
     <jsp:include page="../../fragments/tools/metier/blocnote_user.jsp" />
 </sec:authorize>
