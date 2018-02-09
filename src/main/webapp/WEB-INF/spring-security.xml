@@ -34,8 +34,8 @@
             <security:user-service>
                 <security:user name="admin" password="admin" authorities="ROLE_ADMIN" />
                 <security:user name="test" password="test" authorities="ROLE_USER" />
-                <security:user name="pharma" password="pharma" authorities="ROLE_USER,ROLE_PHARMACIEN" />
-                <security:user name="medecin" password="mg" authorities="ROLE_USER,ROLE_MEDECIN" />
+                <security:user name="9876543210" password="197362" authorities="ROLE_USER,ROLE_PHARMACIEN" />
+                <security:user name="1234567890" password="875960" authorities="ROLE_USER,ROLE_MEDECIN" />
                 <security:user name="inta" password="ia" authorities="ROLE_IA" />
             </security:user-service>
         </security:authentication-provider>

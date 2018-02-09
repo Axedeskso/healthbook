@@ -18,12 +18,14 @@
                 <source id="source_ia" src="http://192.168.10.2:8080/videos/BP1.mp4" type='video/mp4' />
             </video>
             <input type="hidden" id="target" value='${annee}'/>
+            <c:if test = "${annee != '0000-00-00 00:00:00'}">
             <div class="row" id="footer_ia">
                 <div class="col-lg-12" id="countdown">
                     <div class="col-xs-12"></div>
                     <label><span id="countdown_hour">00</span>:<span id="countdown_min" >00</span>:<span id="countdown_sec" >00</span></label>
                 </div>
             </div>
+            </c:if>
             <jsp:include page="./fragments/end.jsp" />
         </body>
     </sec:authorize>
@@ -33,10 +35,10 @@
             <div class="container-fluid" id="page-content-wrapper">
                 <div class="page-content">
                     <div class="row">
-                        <div class="col-lg-2 hidden-sm">
+                        <div class="col-lg-2">
                             <jsp:include page="./fragments/navbar/sidebar_left.jsp" />
                         </div>
-                        <div class="col-lg-8 col-sm-12">
+                        <div class="col-lg-8">
                             <sec:authorize access="hasRole('ROLE_USER')">
                                 <jsp:include page="./fragments/actualite.jsp" />
                             </sec:authorize>
@@ -44,7 +46,7 @@
                                 <jsp:include page="./fragments/admin/joueurs.jsp" />
                             </sec:authorize>
                         </div>
-                        <div class="col-lg-2 hidden-sm">
+                        <div class="col-lg-2">
                             <jsp:include page="./fragments/navbar/sidebar_right.jsp" />
                         </div>
                     </div>

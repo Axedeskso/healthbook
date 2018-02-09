@@ -14,18 +14,13 @@
             <div class="page-content">
                 <div class="row">
                     <div class="col-xs-2">
-                        <jsp:include page="../../fragments/tools/user/profil_user.jsp" />
-                        <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="../../fragments/tools/metier/blocnote_user.jsp" />
-                        </sec:authorize>
+                        <jsp:include page="../../fragments/navbar/sidebar_left.jsp" />
                     </div>
                     <div class="col-xs-8">
-                        <iframe src="http://browser.ihtsdotools.org/?perspective=full&conceptId1=404684003&edition=en-edition&release=v20170731&server=http://browser.ihtsdotools.org/api/v1/snomed&langRefset=900000000000509007" width="980px" height="900px"></iframe>
+                        <iframe src="http://browser.ihtsdotools.org/?" width="100%" height="900px"></iframe>
                     </div>
                     <div class="col-xs-2">
-                        <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="../../fragments/tools/metier/tools_user.jsp" />
-                        </sec:authorize>
+                        <jsp:include page="../../fragments/navbar/sidebar_right.jsp" />
                     </div>
                 </div>
             </div>    

@@ -28,74 +28,74 @@
                 </div>
             </a>
             <c:if test = "${codeC != 'verrouillées'}">
-                <a href="#" class="list-group-item">
-                    <div class="row">
-                        <div class="col-sm-11">
-                            Pharmacie <span class="badge">${codeP}</span>
-                        </div>
-                        <div class="col-xs-1">
-                            <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#pharmaM">
-                                <i class="fa fa-lock" aria-hidden="true"></i>
-                            </button>
-                        </div>
+            <a href="#" class="list-group-item  ${fondP}">
+                <div class="row">
+                    <div class="col-sm-11">
+                        Pharmacie <span class="badge">${codeP}</span>
                     </div>
-                </a>
+                    <div class="col-xs-1">
+                        <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#pharmaM" ${btnP}>
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </a>
             </c:if>
-            <c:if test = "${codeCP != 'verrouillée'}">
-                <a href="#" class="list-group-item">
-                    <div class="row">
-                        <div class="col-sm-11">
-                            Cabinet médical <span class="badge">${codeCb}</span>
-                        </div>
-                        <div class="col-xs-1">
-                            <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#cabinetM">
-                                <i class="fa fa-lock" aria-hidden="true"></i>
-                            </button>
-                        </div>
+            <c:if test = "${codeP != 'verrouillée'}">
+            <a href="#" class="list-group-item  ${fondCb}">
+                <div class="row">
+                    <div class="col-sm-11">
+                        Cabinet médical <span class="badge">${codeCb}</span>
                     </div>
-                </a>
+                    <div class="col-xs-1">
+                        <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#cabinetM" ${btnCb}>
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </a>
             </c:if>
             <c:if test = "${codeCb != 'verrouillé'}">
-                <a href="#" class="list-group-item">
-                    <div class="row">
-                        <div class="col-sm-11">
-                            Local serveur <span class="badge">${codeLS}</span>
-                        </div>
-                        <div class="col-xs-1">
-                            <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#localM">
-                                <i class="fa fa-lock" aria-hidden="true"></i>
-                            </button>
-                        </div>
+            <a href="#" class="list-group-item  ${fondLS}">
+                <div class="row">
+                    <div class="col-sm-11">
+                        Local serveur <span class="badge">${codeLS}</span>
                     </div>
-                </a>
+                    <div class="col-xs-1">
+                        <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#localM" ${btnLS}>
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </a>
             </c:if>
             <c:if test = "${codeLS != 'verrouillé'}">
-                <a id="lienChambre" class="list-group-item">
-                    <div class="row">
-                        <div class="col-sm-11">
-                            Accès serveur <span class="badge">${codeS}</span>
-                        </div>
-                        <div class="col-xs-1">
-                            <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#serverM">
-                                <i class="fa fa-lock" id="icoChambre" aria-hidden="true"></i>
-                            </button>
-                        </div>
+            <a id="lienChambre" class="list-group-item  ${fondS}">
+                <div class="row">
+                    <div class="col-sm-11">
+                        Accès serveur <span class="badge">${codeS}</span>
                     </div>
-                </a>
+                    <div class="col-xs-1">
+                        <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#serverM" ${btnS}>
+                            <i class="fa fa-lock" id="icoChambre" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </a>
             </c:if>
-            <c:if test = "${codeS != 'vérrouillé'}">
-                <a href="#" class="list-group-item">
-                    <div class="row">
-                        <div class="col-sm-11">
-                            Démolition du complexe <span class="badge">${codeD}</span>
-                        </div>
-                        <div class="col-xs-1">
-                            <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#demolitionM">
-                                <i class="fa fa-lock" aria-hidden="true"></i>
-                            </button>
-                        </div>
+            <c:if test = "${codeS != 'verrouillé'}">
+            <a href="#" class="list-group-item ${fondD}" >
+                <div class="row">
+                    <div class="col-sm-11">
+                        Démolition du complexe <span class="badge">${codeD}</span>
                     </div>
-                </a>
+                    <div class="col-xs-1">
+                        <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#demolitionM" ${btnD}>
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </a>
             </c:if>
         </div>
     </div>
@@ -108,7 +108,7 @@
             <div class="modal-header">
                 Sécurité - Chambre d'hospitalisation
             </div>
-            <form:form action="${contextPath}/chambre" name="codeChambre" id="formChambre">
+            <form:form action="${contextPath}/securite/chambre" name="codeChambre" id="formChambre">
                 <div class="modal-body">
                     <div class="row">Entrer le code du CR d'examen biologique du patient Zéro</div>
                     <div class="row">
@@ -162,9 +162,9 @@
             <div class="modal-header">
                 Sécurité - Pharmacie
             </div>
-            <form:form action="${contextPath}/pharmacie" name="codePharmacie" id="formChambre">
+            <form:form action="${contextPath}/securite/pharmacie" name="codePharmacie" id="formChambre">
                 <div class="modal-body">
-                    <div class="row">Entrer le code pour dévérouiller l'accès à la pharmacie</div>
+                    <div class="row">Entrer le code pour déverouiller l'accès à la pharmacie</div>
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="row">
@@ -221,9 +221,9 @@
             <div class="modal-header">
                 Sécurité - Cabinet médicale
             </div>
-            <form:form action="${contextPath}/cabinet" name="codeCabinet" id="formChambre">
+            <form:form action="${contextPath}/securite/cabinet" name="codeCabinet" id="formChambre">
                 <div class="modal-body">
-                    <div class="row">Entrer le code pour dévérouiller la porte du cabinet médicale</div>
+                    <div class="row">Entrer le code pour déverouiller la porte du cabinet médicale</div>
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="row">
@@ -275,39 +275,44 @@
             <div class="modal-header">
                 Sécurité - Local Serveur
             </div>
-            <form:form action="http://localhost:8084/healthbook/securite/pharmacie" name="codePharmacie" id="formChambre">
+            <form:form action="${contextPath}/securite/localserveur" name="codeLS" id="formLS">
                 <div class="modal-body">
-                    <div class="row">Entrer le code pour dévérouiller l'accès au local serveur</div>
+                    <div class="row">Entrer le code pour déverouiller l'accès au local serveur</div>
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="row">
-                                <div class="col-xs-4"></div>
+                                <div class="col-xs-3"></div>
                                 <div class="col-xs-1">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="code1" name="code1" maxlength="1">
+                                        <input type="text" class="form-control" id="codeLS1" name="codeLS1" maxlength="1">
                                     </div>
                                 </div>
                                 <div class="col-xs-1">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="code2" name="codePharmacie2" maxlength="1">
+                                        <input type="text" class="form-control" id="codeLS2" name="codeLS2" maxlength="1">
                                     </div>
                                 </div>
                                 <div class="col-xs-1">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="code3" name="code3" maxlength="1">
+                                        <input type="text" class="form-control" id="codeLS3" name="codeLS3" maxlength="1">
                                     </div>
                                 </div>
                                 <div class="col-xs-1">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="code4" name="code4" maxlength="1">
+                                        <input type="text" class="form-control" id="codeLS4" name="codeLS4" maxlength="1">
                                     </div>
                                 </div>
                                 <div class="col-xs-1">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="code5" name="code" maxlength="1">
+                                        <input type="text" class="form-control" id="codeLS5" name="codeLS5" maxlength="1">
                                     </div>
                                 </div>
-                                <div class="col-xs-4"></div>
+                                <div class="col-xs-1">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="codeLS6" name="codeLS6" maxlength="1">
+                                    </div>
+                                </div>
+                                <div class="col-xs-3"></div>
                             </div>
                         </div>
                     </div>
@@ -334,39 +339,49 @@
             <div class="modal-header">
                 Sécurité - Local Serveur
             </div>
-            <form:form action="http://localhost:8084/healthbook/securite/pharmacie" name="codePharmacie" id="formChambre">
+            <form:form action="${contextPath}/securite/serveur" name="codeServer" id="formServer">
                 <div class="modal-body">
-                    <div class="row">Entrer le code pour dévérouiller l'accès au local serveur</div>
+                    <div class="row">Entrer le code pour déverouiller l'accès au serveur</div>
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="row">
-                                <div class="col-xs-4"></div>
+                                <div class="col-xs-3"></div>
                                 <div class="col-xs-1">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="code1" name="code1" maxlength="1">
+                                        <input type="text" class="form-control" id="codeS1" name="codeS1" maxlength="1">
                                     </div>
                                 </div>
                                 <div class="col-xs-1">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="code2" name="codePharmacie2" maxlength="1">
+                                        <input type="text" class="form-control" id="codeS2" name="codeS2" maxlength="1">
                                     </div>
                                 </div>
                                 <div class="col-xs-1">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="code3" name="code3" maxlength="1">
+                                        <input type="text" class="form-control" id="codeS3" name="codeS3" maxlength="1">
                                     </div>
                                 </div>
                                 <div class="col-xs-1">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="code4" name="code4" maxlength="1">
+                                        <input type="text" class="form-control" id="codeS4" name="codeS4" maxlength="1">
                                     </div>
                                 </div>
                                 <div class="col-xs-1">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" id="code5" name="code" maxlength="1">
+                                        <input type="text" class="form-control" id="codeS5" name="codeS5" maxlength="1">
                                     </div>
                                 </div>
-                                <div class="col-xs-4"></div>
+                                <div class="col-xs-1">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="codeS6" name="codeS6" maxlength="1">
+                                    </div>
+                                </div>
+                                <div class="col-xs-1">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="codeS7" name="codeS7" maxlength="1">
+                                    </div>
+                                </div>
+                                <div class="col-xs-2"></div>
                             </div>
                         </div>
                     </div>
@@ -393,39 +408,13 @@
             <div class="modal-header">
                 Sécurité - Local Serveur
             </div>
-            <form:form action="http://localhost:8084/healthbook/securite/pharmacie" name="codePharmacie" id="formChambre">
+            <form:form action="${contextPath}/securite/demolition" name="codePharmacie" id="formChambre">
                 <div class="modal-body">
-                    <div class="row">Entrer le code pour dévérouiller l'accès au local serveur</div>
+                    <div class="row">Entrer la commande pour désactiver la demolition</div>
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="row">
-                                <div class="col-xs-4"></div>
-                                <div class="col-xs-1">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="code1" name="code1" maxlength="1">
-                                    </div>
-                                </div>
-                                <div class="col-xs-1">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="code2" name="codePharmacie2" maxlength="1">
-                                    </div>
-                                </div>
-                                <div class="col-xs-1">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="code3" name="code3" maxlength="1">
-                                    </div>
-                                </div>
-                                <div class="col-xs-1">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="code4" name="code4" maxlength="1">
-                                    </div>
-                                </div>
-                                <div class="col-xs-1">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="code5" name="code" maxlength="1">
-                                    </div>
-                                </div>
-                                <div class="col-xs-4"></div>
+                            <div class="input-form">
+                                <input type="text" class="form-control" id="codeD1" name="codeD1" maxlength="84">
                             </div>
                         </div>
                     </div>

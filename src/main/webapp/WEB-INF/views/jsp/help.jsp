@@ -18,9 +18,21 @@
                     </div>
                     <div class="col-xs-8">
                         <div class="panel panel-success">
-                            <div class="panel-heading"><i class="fa fa-envelope-o" aria-hidden="true"></i> Aide</div>
+                            <div class="panel-heading"><span class="glyphicon glyphicon-question-sign"></span> Aide</div>
                             <div class="panel-body">
-                                
+                                <div class="row">
+                                    <div class="col-sm-1"><img src="<c:url value="/resources/core/img/lock.png" />" class="img-responsive"></div>
+                                    <div class="col-sm-11">Tout entitée comportant cette icone est verrouillée. Le cadena est caractérisé par une lettre.</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-1"><img src="<c:url value="/resources/core/img/unlock.png" />" class="img-responsive"></div>
+                                    <div class="col-sm-11">Pour déverrouiller une entitée, vous devez trouver le cadena correspondant.</div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="row">
+                                    <div class="col-sm-1"><img src="<c:url value="/resources/core/img/forbit.png" />" class="img-responsive"></div>
+                                    <div class="col-sm-11">Tout entitée comportant cette icone est interdit à l'utilisation sous peine d'être pénalisé.</div>
+                                </div>
                             </div>
                         </div>
                     </div>

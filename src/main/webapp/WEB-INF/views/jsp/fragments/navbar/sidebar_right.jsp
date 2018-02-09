@@ -10,7 +10,7 @@
         <jsp:include page="../../fragments/tools/administrateur/decompte_user.jsp" />
     </c:if>
 </sec:authorize>
-<sec:authorize access="hasRole('ROLE_USER') or hasRole('ROLE_IA')">
+<sec:authorize access="hasRole('ROLE_USER') or hasRole('ROLE_MEDECIN')">
     <c:if test="${not empty cible}">
         <jsp:include page="../../fragments/tools/administrateur/decompte_user.jsp" />
     </c:if>

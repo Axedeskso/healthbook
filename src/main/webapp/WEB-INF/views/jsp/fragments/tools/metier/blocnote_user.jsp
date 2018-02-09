@@ -3,109 +3,75 @@
 <div class="panel panel-success">
     <div class="panel-heading">
         <div class="row">
-            <div class="col-sm-10">
+            <div class="col-sm-102">
                 <i class="fa fa-sticky-note" aria-hidden="true"></i> Bloc-note
             </div>
-            <div class="col-xs-2">
-                        <button class="btn btn-success btn-xs pull-right" data-toggle="modal" data-target="#bc">
-                            <i class="fa fa-plus-square" aria-hidden="true"></i>
-                        </button>
-                </div>
         </div>       
     </div>
 
     <div class="list-group">
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-sm-10">
-                    D 0218944561
-                </div>
-                <div class="col-xs-2">
-                        <button class="btn btn-success btn-xs pull-right">
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
+                <div class="col-sm-112">
+                    Le DSI ne veut pas me laisser aller dans le local serveur pour vérifier mes mandats. Sacré Barack...
                 </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-xs-10">
-                    E 3456789445
-                </div>
-                <div class="col-xs-2">
-                        <button class="btn btn-success btn-xs pull-right">
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
+                <div class="col-sm-112">
+                    J'ai réussi à lui subtiliser sa carte. Je l'ai bien caché...
                 </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-sm-10">
-                    M 8411126778
-                </div>
-                <div class="col-xs-2">
-                        <button class="btn btn-success btn-xs pull-right">
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
+                <div class="col-sm-112">
+                    <span class="badge badge-noir"><span class="fa fa-circle"></span></span> et <span class="badge badge-orange"><span class="fa fa-circle"></span></span> sont connectés
                 </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-sm-10">
-                    O 5486107895
-                </div>
-                <div class="col-xs-2">
-                        <button class="btn btn-success btn-xs pull-right">
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
+                <div class="col-sm-112">
+                    <span class="badge badge-jaune"><span class="fa fa-circle"></span></span> et <span class="badge badge-orange"><span class="fa fa-circle"></span></span> ne sont connectés
                 </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-sm-10">
-                    N 5473594610
-                </div>
-                <div class="col-xs-2">
-                        <button class="btn btn-success btn-xs pull-right">
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
+                <div class="col-sm-112">
+                    <span class="badge badge-rose"><span class="fa fa-circle"></span></span> est uniquement connecté avec le <span class="badge badge-noir"><span class="fa fa-circle"></span></span>
                 </div>
             </div>
         </a>
         <a href="#" class="list-group-item">
             <div class="row">
-                <div class="col-sm-10">
-                    S 1547893865
-                </div>
-                <div class="col-xs-2">
-                        <button class="btn btn-success btn-xs pull-right">
-                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                        </button>
+                <div class="col-sm-112">
+                    <span class="badge"><span class="fa fa-circle"></span></span> est le noeud avec le plus de connexions
                 </div>
             </div>
         </a>
-    </div>
-</div>
-
-<div class="modal fade" id="bc">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                Ajouter une note
-            </div>
-            <div class="modal-body">
-                <textarea class="form-control" rows="2"></textarea>
-            </div>
-            <div class="modal-footer">
-                <div class="row">
-                    <div class="col-sm-2"><button class="btn btn-success btn-block" data-toggle="modal" data-target="#bc">Fermer</button></div>
-                    <div class="col-sm-8"></div>
-                    <div class="col-sm-2"><button class="btn btn-success btn-block" data-toggle="modal" data-target="#bc">Ajouter</button></div>
+        <a href="#" class="list-group-item">
+            <div class="row">
+                <div class="col-sm-112">
+                    <span class="badge badge-bleu"><span class="fa fa-circle"></span></span> est connectés à 3 noeuds
                 </div>
             </div>
-        </div>
+        </a>
+        <a href="#" class="list-group-item">
+            <div class="row">
+                <div class="col-sm-112">
+                    <span class="badge badge-vert"><span class="fa fa-circle"></span></span> et <span class="badge badge-bleu"><span class="fa fa-circle"></span></span> ne sont connectés
+                </div>
+            </div>
+        </a>
+        <a href="#" class="list-group-item">
+            <div class="row">
+                <div class="col-sm-112">
+                    <span class="badge badge-jaune"><span class="fa fa-circle"></span></span> est connecté à 2 noeuds
+                </div>
+            </div>
+        </a>
     </div>
 </div>

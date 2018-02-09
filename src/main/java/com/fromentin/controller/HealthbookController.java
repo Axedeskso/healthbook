@@ -11,7 +11,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.logging.Logger;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -19,29 +20,63 @@ public class HealthbookController {
 
     @Autowired
     HealthbookServiceImpl healthbook_service;
-    
+
     Date debut;
     Date fin;
-    
-    String fondChambre ="list-group-item-success";
+
+    String fondC = "list-group-item-success";
     String chambre = "verrouillées";
-    String btnChambre ="";
-    
+    String btnC = "";
+
+    String fondP = "list-group-item-success";
     String pharmacie = "verrouillée";
-    
+    String btnP = "";
+
+    String fondCb = "list-group-item-success";
     String cabinet = "verrouillé";
-    
+    String btnCb = "";
+
+    String fondLS = "list-group-item-success";
     String localServer = "verrouillé";
+    String btnLS = "";
+
+    String fondS = "list-group-item-success";
     String server = "verrouillé";
+    String btnS = "";
+
+    String fondD = "list-group-item-success";
     String demolition = "activée";
-    
+    String btnD = "";
+
     DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     String reportDate = "0000-00-00 00:00:00";
-    int annee;int mois;int jour;int heures;int minutes;
-
+    int annee;
+    int mois;
+    int jour;
+    int heures;
+    int minutes;
+    
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home(@RequestParam(value = "launch", required = false) String launch, Model model) {
         if (launch != null) {
+            fondC = "list-group-item-success";
+            chambre = "verrouillées";
+            btnC = "";
+            fondP = "list-group-item-success";
+            pharmacie = "verrouillée";
+            btnP = "";
+            fondCb = "list-group-item-success";
+            cabinet = "verrouillé";
+            btnCb = "";
+            fondLS = "list-group-item-success";
+            localServer = "verrouillé";
+            btnLS = "";
+            fondS = "list-group-item-success";
+            server = "verrouillé";
+            btnS = "";
+            fondD = "list-group-item-success";
+            demolition = "activée";
+            btnD = "";
             model.addAttribute("launch", "non vide");
             debut = Calendar.getInstance().getTime();
             fin = debut;
@@ -49,6 +84,10 @@ public class HealthbookController {
             fin.setMinutes(debut.getMinutes() + 5);
             reportDate = df.format(fin);
         }
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
+        
         model.addAttribute("cible", fin);
         model.addAttribute("annee", reportDate);
         return "index";
@@ -72,163 +111,411 @@ public class HealthbookController {
 
     @RequestMapping(value = "/profil", method = RequestMethod.GET)
     public String profil(Model model) {
+        model.addAttribute("cible", fin);
         model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "profil";
     }
 
     @RequestMapping(value = "/help", method = RequestMethod.GET)
     public String help(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "help";
     }
 
     @RequestMapping(value = "/clients", method = RequestMethod.GET)
     public String clients(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "clients";
     }
 
     @RequestMapping(value = "/documents", method = RequestMethod.GET)
     public String documents(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "documents";
     }
 
     @RequestMapping(value = "/securite", method = RequestMethod.GET)
     public String securits(Model model) {
         model.addAttribute("codeC", chambre);
-        model.addAttribute("fondC", fondChambre);
         model.addAttribute("codeP", pharmacie);
         model.addAttribute("codeCb", cabinet);
         model.addAttribute("codeLS", localServer);
         model.addAttribute("codeS", server);
         model.addAttribute("codeD", demolition);
-        model.addAttribute("fin", fin);
+
+        model.addAttribute("fondC", fondC);
+        model.addAttribute("fondP", fondP);
+        model.addAttribute("fondCb", fondCb);
+        model.addAttribute("fondLS", fondLS);
+        model.addAttribute("fondS", fondS);
+        model.addAttribute("fondD", fondD);
+
+        model.addAttribute("btnC", btnC);
+        model.addAttribute("btnP", btnP);
+        model.addAttribute("btnCb", btnCb);
+        model.addAttribute("btnLS", btnLS);
+        model.addAttribute("btnS", btnS);
+        model.addAttribute("btnD", btnD);
+
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "securite";
     }
-    
+
     @RequestMapping(value = "/securite/chambre", method = RequestMethod.POST)
-    public String securit(
+    public String securitChambre(
             @RequestParam(value = "codeChambre1", required = false) int codeChambre1,
             @RequestParam(value = "codeChambre2", required = false) int codeChambre2,
             @RequestParam(value = "codeChambre3", required = false) int codeChambre3,
             @RequestParam(value = "codeChambre4", required = false) int codeChambre4,
             Model model) {
-        if (codeChambre1 == 8 && codeChambre2 == 5 && codeChambre3 == 0 && codeChambre4 == 1 ) {
+        if (codeChambre1 == 8 && codeChambre2 == 5 && codeChambre3 == 0 && codeChambre4 == 1) {
             chambre = "<i class=\"fa fa-unlock\" id=\"icoChambre\" aria-hidden=\"true\"></i> A";
-            fondChambre = "list-group-item-warning";
-            btnChambre = "disabled";
+            fondC = "list-group-item-warning";
+            btnC = "disabled";
         }
         model.addAttribute("codeC", chambre);
-        model.addAttribute("fondC", fondChambre);
-        model.addAttribute("btnC", btnChambre);
-        
         model.addAttribute("codeP", pharmacie);
-        
         model.addAttribute("codeCb", cabinet);
-        model.addAttribute("fin", fin);
+        model.addAttribute("codeLS", localServer);
+        model.addAttribute("codeS", server);
+        model.addAttribute("codeD", demolition);
+
+        model.addAttribute("fondC", fondC);
+        model.addAttribute("fondP", fondP);
+        model.addAttribute("fondCb", fondCb);
+        model.addAttribute("fondLS", fondLS);
+        model.addAttribute("fondS", fondS);
+        model.addAttribute("fondD", fondD);
+
+        model.addAttribute("btnC", btnC);
+        model.addAttribute("btnP", btnP);
+        model.addAttribute("btnCb", btnCb);
+        model.addAttribute("btnLS", btnLS);
+        model.addAttribute("btnS", btnS);
+        model.addAttribute("btnD", btnD);
+        
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "securite";
     }
-    
+
     @RequestMapping(value = "/securite/pharmacie", method = RequestMethod.POST)
-    public String securit(
+    public String securitPharmacie(
             @RequestParam(value = "codePharmacie1", required = false) String codePharmacie1,
             @RequestParam(value = "codePharmacie2", required = false) String codePharmacie2,
             @RequestParam(value = "codePharmacie3", required = false) String codePharmacie3,
             @RequestParam(value = "codePharmacie4", required = false) String codePharmacie4,
             @RequestParam(value = "codePharmacie5", required = false) String codePharmacie5,
             Model model) {
-        if (codePharmacie1.equals("E")&& codePharmacie2.equals("B") && codePharmacie3.equals("O") && codePharmacie4.equals("L") && codePharmacie5.equals("A")) {
-            pharmacie = "déverrouillée";
+        if (codePharmacie1.equals("E") && codePharmacie2.equals("B") && codePharmacie3.equals("O") && codePharmacie4.equals("L") && codePharmacie5.equals("A")) {
+            pharmacie = "deverrouillée";
+            fondP = "list-group-item-warning";
+            btnP = "disabled";
         }
         model.addAttribute("codeC", chambre);
         model.addAttribute("codeP", pharmacie);
         model.addAttribute("codeCb", cabinet);
-        model.addAttribute("fin", fin);
+        model.addAttribute("codeLS", localServer);
+        model.addAttribute("codeS", server);
+        model.addAttribute("codeD", demolition);
+
+        model.addAttribute("fondC", fondC);
+        model.addAttribute("fondP", fondP);
+        model.addAttribute("fondCb", fondCb);
+        model.addAttribute("fondLS", fondLS);
+        model.addAttribute("fondS", fondS);
+        model.addAttribute("fondD", fondD);
+
+        model.addAttribute("btnC", btnC);
+        model.addAttribute("btnP", btnP);
+        model.addAttribute("btnCb", btnCb);
+        model.addAttribute("btnLS", btnLS);
+        model.addAttribute("btnS", btnS);
+        model.addAttribute("btnD", btnD);
+        
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "securite";
     }
-    
+
     @RequestMapping(value = "/securite/cabinet", method = RequestMethod.POST)
-    public String securit(
+    public String securitCabinet(
             @RequestParam(value = "codeCabinet1", required = false) String codeCabinet1,
             @RequestParam(value = "codeCabinet2", required = false) String codeCabinet2,
             @RequestParam(value = "codeCabinet3", required = false) String codeCabinet3,
             @RequestParam(value = "codeCabinet4", required = false) String codeCabinet4,
             Model model) {
-        if (codeCabinet1.equals("V") && codeCabinet2.equals("E") && codeCabinet3.equals("R") && codeCabinet4.equals("T") ) {
+        if (codeCabinet1.equals("V") && codeCabinet2.equals("E") && codeCabinet3.equals("R") && codeCabinet4.equals("T")) {
             cabinet = "40811007 SNCT";
+            fondCb = "list-group-item-warning";
+            btnCb = "disabled";
         }
         model.addAttribute("codeC", chambre);
+        model.addAttribute("codeP", pharmacie);
         model.addAttribute("codeCb", cabinet);
-        model.addAttribute("fin", fin);
+        model.addAttribute("codeLS", localServer);
+        model.addAttribute("codeS", server);
+        model.addAttribute("codeD", demolition);
+
+        model.addAttribute("fondC", fondC);
+        model.addAttribute("fondP", fondP);
+        model.addAttribute("fondCb", fondCb);
+        model.addAttribute("fondLS", fondLS);
+        model.addAttribute("fondS", fondS);
+        model.addAttribute("fondD", fondD);
+        
+        model.addAttribute("btnC", btnC);
+        model.addAttribute("btnP", btnP);
+        model.addAttribute("btnCb", btnCb);
+        model.addAttribute("btnLS", btnLS);
+        model.addAttribute("btnS", btnS);
+        model.addAttribute("btnD", btnD);
+        
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "securite";
     }
-    
+
+    @RequestMapping(value = "/securite/localserveur", method = RequestMethod.POST)
+    public String securitLocalServeur(
+            @RequestParam(value = "codeLS1", required = false) int codeLS1,
+            @RequestParam(value = "codeLS2", required = false) int codeLS2,
+            @RequestParam(value = "codeLS3", required = false) int codeLS3,
+            @RequestParam(value = "codeLS4", required = false) int codeLS4,
+            @RequestParam(value = "codeLS5", required = false) int codeLS5,
+            @RequestParam(value = "codeLS6", required = false) int codeLS6,
+            Model model) {
+        if (codeLS1 == 3 && codeLS2 == 7 && codeLS3 == 9 && codeLS4 == 1 && codeLS5 == 6 && codeLS6 == 4) {
+            localServer = "deverrouillé";
+            fondLS = "list-group-item-warning";
+            btnLS = "disabled";
+        }
+        model.addAttribute("codeC", chambre);
+        model.addAttribute("codeP", pharmacie);
+        model.addAttribute("codeCb", cabinet);
+        model.addAttribute("codeLS", localServer);
+        model.addAttribute("codeS", server);
+        model.addAttribute("codeD", demolition);
+
+        model.addAttribute("fondC", fondC);
+        model.addAttribute("fondP", fondP);
+        model.addAttribute("fondCb", fondCb);
+        model.addAttribute("fondLS", fondLS);
+        model.addAttribute("fondS", fondS);
+        model.addAttribute("fondD", fondD);
+        
+        model.addAttribute("btnC", btnC);
+        model.addAttribute("btnP", btnP);
+        model.addAttribute("btnCb", btnCb);
+        model.addAttribute("btnLS", btnLS);
+        model.addAttribute("btnS", btnS);
+        model.addAttribute("btnD", btnD);
+        
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
+        return "securite";
+    }
+
+    @RequestMapping(value = "/securite/serveur", method = RequestMethod.POST)
+    public String securitServer(
+            @RequestParam(value = "codeS1", required = false) int codeS1,
+            @RequestParam(value = "codeS2", required = false) int codeS2,
+            @RequestParam(value = "codeS3", required = false) int codeS3,
+            @RequestParam(value = "codeS4", required = false) int codeS4,
+            @RequestParam(value = "codeS5", required = false) int codeS5,
+            @RequestParam(value = "codeS6", required = false) int codeS6,
+            @RequestParam(value = "codeS7", required = false) int codeS7,
+            Model model) {
+        if (codeS1 == 7 && codeS2 == 3 && codeS3 == 6 && codeS4 == 8 && codeS5 == 0 && codeS6 == 5 && codeS7 == 8) {
+            server = "deverrouillé";
+            fondS = "list-group-item-warning";
+            btnS = "disabled";
+        }
+        model.addAttribute("codeC", chambre);
+        model.addAttribute("codeP", pharmacie);
+        model.addAttribute("codeCb", cabinet);
+        model.addAttribute("codeLS", localServer);
+        model.addAttribute("codeS", server);
+        model.addAttribute("codeD", demolition);
+
+        model.addAttribute("fondC", fondC);
+        model.addAttribute("fondP", fondP);
+        model.addAttribute("fondCb", fondCb);
+        model.addAttribute("fondLS", fondLS);
+        model.addAttribute("fondS", fondS);
+        model.addAttribute("fondD", fondD);
+        
+        model.addAttribute("btnC", btnC);
+        model.addAttribute("btnP", btnP);
+        model.addAttribute("btnCb", btnCb);
+        model.addAttribute("btnLS", btnLS);
+        model.addAttribute("btnS", btnS);
+        model.addAttribute("btnD", btnD);
+        
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
+        return "securite";
+    }
+
+    @RequestMapping(value = "/securite/demolition", method = RequestMethod.POST)
+    public String securitDemolition(
+            @RequestParam(value = "codeD1", required = false) String codeS1,
+            Model model) {
+        if (codeS1.equals("execute disable CHL security -xmM 0x88073E -p -f 0x7A3FFE stop.exe -auth -kX EXECUTE")) {
+            demolition = "desactivée";
+            fondD = "list-group-item-warning";
+            btnD = "disabled";
+        }
+        model.addAttribute("codeC", chambre);
+        model.addAttribute("codeP", pharmacie);
+        model.addAttribute("codeCb", cabinet);
+        model.addAttribute("codeLS", localServer);
+        model.addAttribute("codeS", server);
+        model.addAttribute("codeD", demolition);
+
+        model.addAttribute("fondC", fondC);
+        model.addAttribute("fondP", fondP);
+        model.addAttribute("fondCb", fondCb);
+        model.addAttribute("fondLS", fondLS);
+        model.addAttribute("fondS", fondS);
+        model.addAttribute("fondD", fondD);
+        model.addAttribute("btnC", btnC);
+        model.addAttribute("btnP", btnP);
+        model.addAttribute("btnCb", btnCb);
+        model.addAttribute("btnLS", btnLS);
+        model.addAttribute("btnS", btnS);
+        model.addAttribute("btnD", btnD);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
+        return "securite";
+    }
+
     @RequestMapping(value = "/documents/1", method = RequestMethod.GET)
     public String document(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "document";
     }
-    
+
 //TOOLS
     @RequestMapping(value = "/tools/nomenclatures", method = RequestMethod.GET)
     public String nomenclatures(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "outils/nomenclatures/index";
     }
 
     @RequestMapping(value = "/tools/nomenclatures/snomed", method = RequestMethod.GET)
     public String snomed(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "outils/nomenclatures/snomed";
     }
 
     @RequestMapping(value = "/tools/catalogues", method = RequestMethod.GET)
     public String catalogues(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "outils/catalogues/index";
     }
 
     @RequestMapping(value = "/tools/codifications", method = RequestMethod.GET)
     public String codifications(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "outils/codifications/index";
     }
 
     @RequestMapping(value = "/tools/classifications", method = RequestMethod.GET)
     public String classifications(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "outils/classifications/index";
     }
 
     @RequestMapping(value = "/tools/dictionnaires", method = RequestMethod.GET)
     public String dictionnaires(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "outils/dictionnaires/index";
     }
 
     @RequestMapping(value = "/tools/thesaurus", method = RequestMethod.GET)
     public String thesaurus(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "outils/thesaurus/index";
     }
 
 //    CHAT
     @RequestMapping(value = "/chat", method = RequestMethod.GET)
     public String chat(Model model) {
-        model.addAttribute("debut", debut);
-        model.addAttribute("fin", fin);
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
         return "chat";
     }
 

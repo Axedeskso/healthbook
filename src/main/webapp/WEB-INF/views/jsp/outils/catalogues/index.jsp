@@ -16,10 +16,7 @@
             <div class="page-content">
                 <div class="row">
                     <div class="col-xs-2">
-                        <jsp:include page="../../fragments/tools/user/profil_user.jsp" />
-                        <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="../../fragments/tools/metier/blocnote_user.jsp" />
-                        </sec:authorize>
+                        <jsp:include page="../../fragments/navbar/sidebar_left.jsp" />
                     </div>
                     <div class="col-xs-8">
                         <div class="row">
@@ -55,9 +52,7 @@
                         </div>
                     </div>
                     <div class="col-xs-2">
-                        <sec:authorize access="hasRole('ROLE_USER')">
-                            <jsp:include page="../../fragments/tools/metier/tools_user.jsp" />
-                        </sec:authorize>
+                        <jsp:include page="../../fragments/navbar/sidebar_right.jsp" />
                     </div>
                 </div>
             </div>    

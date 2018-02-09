@@ -114,7 +114,7 @@ function video(hour, min, sec) {
             source.setAttribute('src', 'http://192.168.10.2:8080/videos/BP2.mp4');
             videod.load();
             videod.play();
-        }, 8000);
+        }, 7500);
     } else if (hour == 0 && min == 4 && sec == 4) {
         videod.pause();
         source.setAttribute('src', 'http://192.168.10.2:8080/videos/V8.mp4');
