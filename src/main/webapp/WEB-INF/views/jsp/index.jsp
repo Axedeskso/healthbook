@@ -35,10 +35,10 @@
             <div class="container-fluid" id="page-content-wrapper">
                 <div class="page-content">
                     <div class="row">
-                        <div class="col-lg-2">
+                        <div class="col-lg-2 hidden-md hidden-sm hidden-xs">
                             <jsp:include page="./fragments/navbar/sidebar_left.jsp" />
                         </div>
-                        <div class="col-lg-8">
+                        <div class="col-lg-8 col-md-12">
                             <sec:authorize access="hasRole('ROLE_USER')">
                                 <jsp:include page="./fragments/actualite.jsp" />
                             </sec:authorize>
@@ -46,7 +46,7 @@
                                 <jsp:include page="./fragments/admin/joueurs.jsp" />
                             </sec:authorize>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-2 hidden-md hidden-sm hidden-xs">
                             <jsp:include page="./fragments/navbar/sidebar_right.jsp" />
                         </div>
                     </div>

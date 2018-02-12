@@ -38,7 +38,7 @@
                                             </div>
                                         </div>
                                     </a>
-                                    <a href="#" class="list-group-item">
+                                    <a href="${contextPath}/tools/classifications/cim10" class="list-group-item">
                                         <div class="row">
                                             <div class="col-sm-2">
                                                 CIM-10

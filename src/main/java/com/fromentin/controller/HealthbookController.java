@@ -24,28 +24,29 @@ public class HealthbookController {
     Date debut;
     Date fin;
 
+    boolean secC= true;
     String fondC = "list-group-item-success";
-    String chambre = "verrouillées";
+    String chambre = "<span class=\"badge\">verrouillées</span>";
     String btnC = "";
-
+    boolean secP= true;
     String fondP = "list-group-item-success";
-    String pharmacie = "verrouillée";
+    String pharmacie = "<span class=\"badge\">verrouillée</span>";
     String btnP = "";
-
+    boolean secCb= true;
     String fondCb = "list-group-item-success";
-    String cabinet = "verrouillé";
+    String cabinet = "<span class=\"badge\">verrouillé</span>";
     String btnCb = "";
-
+    boolean secLS= true;
     String fondLS = "list-group-item-success";
-    String localServer = "verrouillé";
+    String localServer = "<span class=\"badge\">verrouillé</span>";
     String btnLS = "";
-
+    boolean secS= true;
     String fondS = "list-group-item-success";
-    String server = "verrouillé";
+    String server = "<span class=\"badge\">verrouillé</span>";
     String btnS = "";
-
+    boolean secD= true;
     String fondD = "list-group-item-success";
-    String demolition = "activée";
+    String demolition = "<span class=\"badge badge-vert\">activée</span>";
     String btnD = "";
 
     DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -59,23 +60,29 @@ public class HealthbookController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String home(@RequestParam(value = "launch", required = false) String launch, Model model) {
         if (launch != null) {
+            secC = true;
             fondC = "list-group-item-success";
-            chambre = "verrouillées";
+            chambre = "<span class=\"badge\">verrouillées</span>";
             btnC = "";
+            secP = true;
             fondP = "list-group-item-success";
-            pharmacie = "verrouillée";
+            pharmacie = "<span class=\"badge\">verrouillée</span>";
             btnP = "";
+            secCb = true;
             fondCb = "list-group-item-success";
-            cabinet = "verrouillé";
+            cabinet = "<span class=\"badge\">verrouillé</span>";
             btnCb = "";
+            secLS = true;
             fondLS = "list-group-item-success";
-            localServer = "verrouillé";
+            localServer = "<span class=\"badge\">verrouillé</span>";
             btnLS = "";
+            secS = true;
             fondS = "list-group-item-success";
-            server = "verrouillé";
+            server = "<span class=\"badge\">verrouillé</span>";
             btnS = "";
+            secD = true;
             fondD = "list-group-item-success";
-            demolition = "activée";
+            demolition = "<span class=\"badge badge-vert\">activée</span>";
             btnD = "";
             model.addAttribute("launch", "non vide");
             debut = Calendar.getInstance().getTime();
@@ -151,6 +158,13 @@ public class HealthbookController {
 
     @RequestMapping(value = "/securite", method = RequestMethod.GET)
     public String securits(Model model) {
+        model.addAttribute("secC", secC);
+        model.addAttribute("secP", secP);
+        model.addAttribute("secCb", secCb);
+        model.addAttribute("secLS", secLS);
+        model.addAttribute("secS", secS);
+        model.addAttribute("secD", secD);
+        
         model.addAttribute("codeC", chambre);
         model.addAttribute("codeP", pharmacie);
         model.addAttribute("codeCb", cabinet);
@@ -182,16 +196,24 @@ public class HealthbookController {
 
     @RequestMapping(value = "/securite/chambre", method = RequestMethod.POST)
     public String securitChambre(
-            @RequestParam(value = "codeChambre1", required = false) int codeChambre1,
-            @RequestParam(value = "codeChambre2", required = false) int codeChambre2,
-            @RequestParam(value = "codeChambre3", required = false) int codeChambre3,
-            @RequestParam(value = "codeChambre4", required = false) int codeChambre4,
+            @RequestParam(value = "codeChambre1", required = false) String codeChambre1,
+            @RequestParam(value = "codeChambre2", required = false) String codeChambre2,
+            @RequestParam(value = "codeChambre3", required = false) String codeChambre3,
+            @RequestParam(value = "codeChambre4", required = false) String codeChambre4,
             Model model) {
-        if (codeChambre1 == 8 && codeChambre2 == 5 && codeChambre3 == 0 && codeChambre4 == 1) {
-            chambre = "<i class=\"fa fa-unlock\" id=\"icoChambre\" aria-hidden=\"true\"></i> A";
-            fondC = "list-group-item-warning";
+        if (codeChambre1.equals("8") && codeChambre2.equals("5") && codeChambre3.equals("0") && codeChambre4.equals("1")) {
+            secC = false;
+            chambre = "<span class=\"badge badge-vert\"><i class=\"fa fa-unlock\" id=\"icoChambre\" aria-hidden=\"true\"></i> A</span>";
+            fondC = "list-group-item-danger";
             btnC = "disabled";
         }
+        model.addAttribute("secC", secC);
+        model.addAttribute("secP", secP);
+        model.addAttribute("secCb", secCb);
+        model.addAttribute("secLS", secLS);
+        model.addAttribute("secS", secS);
+        model.addAttribute("secD", secD);
+        
         model.addAttribute("codeC", chambre);
         model.addAttribute("codeP", pharmacie);
         model.addAttribute("codeCb", cabinet);
@@ -223,17 +245,26 @@ public class HealthbookController {
 
     @RequestMapping(value = "/securite/pharmacie", method = RequestMethod.POST)
     public String securitPharmacie(
-            @RequestParam(value = "codePharmacie1", required = false) String codePharmacie1,
-            @RequestParam(value = "codePharmacie2", required = false) String codePharmacie2,
-            @RequestParam(value = "codePharmacie3", required = false) String codePharmacie3,
-            @RequestParam(value = "codePharmacie4", required = false) String codePharmacie4,
-            @RequestParam(value = "codePharmacie5", required = false) String codePharmacie5,
+            @RequestParam(value = "codeP1", required = false) String codePharmacie1,
+            @RequestParam(value = "codeP2", required = false) String codePharmacie2,
+            @RequestParam(value = "codeP3", required = false) String codePharmacie3,
+            @RequestParam(value = "codeP4", required = false) String codePharmacie4,
+            @RequestParam(value = "codeP5", required = false) String codePharmacie5,
             Model model) {
         if (codePharmacie1.equals("E") && codePharmacie2.equals("B") && codePharmacie3.equals("O") && codePharmacie4.equals("L") && codePharmacie5.equals("A")) {
-            pharmacie = "deverrouillée";
-            fondP = "list-group-item-warning";
+            secP = false;
+            pharmacie = "<span class=\"badge badge-vert\">deverrouillée</span>";
+            fondP = "list-group-item-danger";
             btnP = "disabled";
         }
+        
+        model.addAttribute("secC", secC);
+        model.addAttribute("secP", secP);
+        model.addAttribute("secCb", secCb);
+        model.addAttribute("secLS", secLS);
+        model.addAttribute("secS", secS);
+        model.addAttribute("secD", secD);
+        
         model.addAttribute("codeC", chambre);
         model.addAttribute("codeP", pharmacie);
         model.addAttribute("codeCb", cabinet);
@@ -265,16 +296,25 @@ public class HealthbookController {
 
     @RequestMapping(value = "/securite/cabinet", method = RequestMethod.POST)
     public String securitCabinet(
-            @RequestParam(value = "codeCabinet1", required = false) String codeCabinet1,
-            @RequestParam(value = "codeCabinet2", required = false) String codeCabinet2,
-            @RequestParam(value = "codeCabinet3", required = false) String codeCabinet3,
-            @RequestParam(value = "codeCabinet4", required = false) String codeCabinet4,
+            @RequestParam(value = "codeCb1", required = false) String codeCabinet1,
+            @RequestParam(value = "codeCb2", required = false) String codeCabinet2,
+            @RequestParam(value = "codeCb3", required = false) String codeCabinet3,
+            @RequestParam(value = "codeCb4", required = false) String codeCabinet4,
             Model model) {
         if (codeCabinet1.equals("V") && codeCabinet2.equals("E") && codeCabinet3.equals("R") && codeCabinet4.equals("T")) {
-            cabinet = "40811007 SNCT";
-            fondCb = "list-group-item-warning";
+            secCb = false;
+            cabinet = "<span class=\"badge badge-vert\">40811007 SNCT</span>";
+            fondCb = "list-group-item-danger";
             btnCb = "disabled";
         }
+        
+        model.addAttribute("secC", secC);
+        model.addAttribute("secP", secP);
+        model.addAttribute("secCb", secCb);
+        model.addAttribute("secLS", secLS);
+        model.addAttribute("secS", secS);
+        model.addAttribute("secD", secD);
+        
         model.addAttribute("codeC", chambre);
         model.addAttribute("codeP", pharmacie);
         model.addAttribute("codeCb", cabinet);
@@ -306,18 +346,27 @@ public class HealthbookController {
 
     @RequestMapping(value = "/securite/localserveur", method = RequestMethod.POST)
     public String securitLocalServeur(
-            @RequestParam(value = "codeLS1", required = false) int codeLS1,
-            @RequestParam(value = "codeLS2", required = false) int codeLS2,
-            @RequestParam(value = "codeLS3", required = false) int codeLS3,
-            @RequestParam(value = "codeLS4", required = false) int codeLS4,
-            @RequestParam(value = "codeLS5", required = false) int codeLS5,
-            @RequestParam(value = "codeLS6", required = false) int codeLS6,
+            @RequestParam(value = "codeLS1", required = false) String codeLS1,
+            @RequestParam(value = "codeLS2", required = false) String codeLS2,
+            @RequestParam(value = "codeLS3", required = false) String codeLS3,
+            @RequestParam(value = "codeLS4", required = false) String codeLS4,
+            @RequestParam(value = "codeLS5", required = false) String codeLS5,
+            @RequestParam(value = "codeLS6", required = false) String codeLS6,
             Model model) {
-        if (codeLS1 == 3 && codeLS2 == 7 && codeLS3 == 9 && codeLS4 == 1 && codeLS5 == 6 && codeLS6 == 4) {
-            localServer = "deverrouillé";
-            fondLS = "list-group-item-warning";
+        if (codeLS1.equals("3") && codeLS2.equals("7") && codeLS3.equals("9") && codeLS4.equals("1") && codeLS5.equals("6") && codeLS6.equals("4")) {
+            secLS = false;
+            localServer = "<span class=\"badge badge-vert\"><i class=\"fa fa-unlock\" id=\"icoChambre\" aria-hidden=\"true\"></i> C</span>";
+            fondLS = "list-group-item-danger";
             btnLS = "disabled";
         }
+        
+        model.addAttribute("secC", secC);
+        model.addAttribute("secP", secP);
+        model.addAttribute("secCb", secCb);
+        model.addAttribute("secLS", secLS);
+        model.addAttribute("secS", secS);
+        model.addAttribute("secD", secD);
+        
         model.addAttribute("codeC", chambre);
         model.addAttribute("codeP", pharmacie);
         model.addAttribute("codeCb", cabinet);
@@ -349,19 +398,28 @@ public class HealthbookController {
 
     @RequestMapping(value = "/securite/serveur", method = RequestMethod.POST)
     public String securitServer(
-            @RequestParam(value = "codeS1", required = false) int codeS1,
-            @RequestParam(value = "codeS2", required = false) int codeS2,
-            @RequestParam(value = "codeS3", required = false) int codeS3,
-            @RequestParam(value = "codeS4", required = false) int codeS4,
-            @RequestParam(value = "codeS5", required = false) int codeS5,
-            @RequestParam(value = "codeS6", required = false) int codeS6,
-            @RequestParam(value = "codeS7", required = false) int codeS7,
+            @RequestParam(value = "codeS1", required = false) String codeS1,
+            @RequestParam(value = "codeS2", required = false) String codeS2,
+            @RequestParam(value = "codeS3", required = false) String codeS3,
+            @RequestParam(value = "codeS4", required = false) String codeS4,
+            @RequestParam(value = "codeS5", required = false) String codeS5,
+            @RequestParam(value = "codeS6", required = false) String codeS6,
+            @RequestParam(value = "codeS7", required = false) String codeS7,
             Model model) {
-        if (codeS1 == 7 && codeS2 == 3 && codeS3 == 6 && codeS4 == 8 && codeS5 == 0 && codeS6 == 5 && codeS7 == 8) {
-            server = "deverrouillé";
-            fondS = "list-group-item-warning";
+        if (codeS1.equals("7") && codeS2.equals("3") && codeS3.equals("6") && codeS4.equals("8") && codeS5.equals("0") && codeS6.equals("5") && codeS7.equals("8")) {
+            secS = false;
+            server = "<span class=\"badge badge-vert\">deverrouillé</span>";
+            fondS = "list-group-item-danger";
             btnS = "disabled";
         }
+        
+        model.addAttribute("secC", secC);
+        model.addAttribute("secP", secP);
+        model.addAttribute("secCb", secCb);
+        model.addAttribute("secLS", secLS);
+        model.addAttribute("secS", secS);
+        model.addAttribute("secD", secD);
+        
         model.addAttribute("codeC", chambre);
         model.addAttribute("codeP", pharmacie);
         model.addAttribute("codeCb", cabinet);
@@ -396,10 +454,20 @@ public class HealthbookController {
             @RequestParam(value = "codeD1", required = false) String codeS1,
             Model model) {
         if (codeS1.equals("execute disable CHL security -xmM 0x88073E -p -f 0x7A3FFE stop.exe -auth -kX EXECUTE")) {
-            demolition = "desactivée";
-            fondD = "list-group-item-warning";
+            secD = false;
+            demolition = "<span class=\"badge\">desactivée</span>";
+            fondD = "list-group-item-danger";
             btnD = "disabled";
+            return "redirect:/endgame";
         }
+        
+        model.addAttribute("secC", secC);
+        model.addAttribute("secP", secP);
+        model.addAttribute("secCb", secCb);
+        model.addAttribute("secLS", secLS);
+        model.addAttribute("secS", secS);
+        model.addAttribute("secD", secD);
+        
         model.addAttribute("codeC", chambre);
         model.addAttribute("codeP", pharmacie);
         model.addAttribute("codeCb", cabinet);
@@ -467,7 +535,7 @@ public class HealthbookController {
         model.addAttribute("username", name);
         return "outils/catalogues/index";
     }
-
+    
     @RequestMapping(value = "/tools/codifications", method = RequestMethod.GET)
     public String codifications(Model model) {
         model.addAttribute("cible", fin);
@@ -488,6 +556,16 @@ public class HealthbookController {
         return "outils/classifications/index";
     }
 
+    @RequestMapping(value = "/tools/classifications/cim10", method = RequestMethod.GET)
+    public String cim(Model model) {
+        model.addAttribute("cible", fin);
+        model.addAttribute("annee", reportDate);
+        User user = (User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String name = user.getUsername();
+        model.addAttribute("username", name);
+        return "outils/classifications/cim";
+    }
+    
     @RequestMapping(value = "/tools/dictionnaires", method = RequestMethod.GET)
     public String dictionnaires(Model model) {
         model.addAttribute("cible", fin);
@@ -519,4 +597,8 @@ public class HealthbookController {
         return "chat";
     }
 
+    @RequestMapping(value = "/endgame", method = RequestMethod.GET)
+    public String end(Model model) {
+        return "endgame";
+    }
 }

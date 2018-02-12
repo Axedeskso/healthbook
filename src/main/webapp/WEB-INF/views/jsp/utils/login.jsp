@@ -40,7 +40,7 @@
                                 <div class="col-sm-12">
                                     <div class="input-group">
                                         <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-user"></span></span>
-                                        <input type="text" class="form-control" placeholder="Nom d'utilisateur" name="username" aria-describedby="sizing-addon2">
+                                        <input type="text" class="form-control" placeholder="IPP" name="username" aria-describedby="sizing-addon2">
                                     </div>
                                 </div>
                             </div>
